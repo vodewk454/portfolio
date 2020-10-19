@@ -1,0 +1,45 @@
+/********** FOOTER **********/
+@charset "UTF-8";
+
+
+#footer {height: 400px; background: #222; color: #fff;}
+.container.ft {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; height: 100%;}
+
+#address {width: 70%; font-style: normal;}
+#address ul {display: flex; margin-bottom: 15px; color: #ccc;}
+#address li {margin-right: 20px;}
+#address p {color: #888; font-weight: 200;}
+#address .ft_p1 {margin-bottom: 15px;}
+#address .ft_p2 {}
+
+#snsBox {position: relative; margin-top: -25px; text-align: right;}
+#snsBox img {margin-left: 20px; width: 25px; cursor: pointer;}
+
+/* 모바일 */
+/************************************************************************************* 1050px */
+@media screen and (max-width: 1050px){
+    
+}
+
+/************************************************************************************* 600px */
+@media screen and (max-width: 600px){
+    
+    /************************* 푸터 *************************/
+    .container.ft {justify-content: center; align-items: flex-start; flex-direction: column-reverse;}
+    #address {width: 100%;}
+    #address li {margin-right: 20px; font-size: .9rem;}
+    #address p {font-size: .9rem;}
+    
+    #snsBox {margin-top: 0; margin-bottom: 30px; margin-left: 5px;}
+    #snsBox img {margin-left: 0; margin-right: 20px; width: 20px;}
+}
+
+/************************************************************************************* 400px */
+@media screen and (max-width: 400px){
+        
+    /************************* 푸터 *************************/
+    #address li {margin-right: 10px; font-size: .8rem;}
+    #address p {font-size: .8rem;}
+    
+    #snsBox img {margin-right: 10px; width: 18px;}
+}

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Seohyun Jeong">
+<meta name="format-detection" content="telephone=no" />
+<title> Levi's men_all </title>
+
+<!----- Favicon ----->
+<link href="images/favicon.ico" rel="shortcut icon" />
+
+<!---------- CSS ---------->
+<!-- animate -->
+<link href="css/plugIn/animate.css" rel="stylesheet" />
+<!-- swiper slider -->
+<link href="js/plugIn/swiper/swiper-bundle.css" rel="stylesheet" />
+<!-- 공통 -->
+<link href="css/reset.css" rel="stylesheet" />
+<link href="css/gnb.css" rel="stylesheet" />
+<link href="css/footer.css" rel="stylesheet" />
+<!-- PRODUCTS -->
+<link href="css/products.css" rel="stylesheet" />
+<link href="css/men_all.css" rel="stylesheet" />
+
+<!---------- JS ---------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- easeScroll -->
+<script src="js/plugIn/jquery.easeScroll.js"></script>
+<!-- wow -->
+<script src="js/plugIn/wow.js"></script>
+<!-- 공통 -->
+<script src="js/gnb.js"></script>
+<!-- PRODUCTS (MEN_ALL) -->
+<script src="js/men_all.js"></script>
+
+</head>
+
+<body>
+<!-------------------------------------------------------------------------------------- GNB -->
+<!---------------------- 탑박스 ---------------------->
+<div id="top_container" class="pd">
+    <!-------------- 탑박스1 -------------->
+    <div id="top_box1">
+        <!----------- 탑 퀵메뉴 ----------->
+        <div class="quickmenu top">
+            <ul>
+                <li class="move" moveHref="register.html">회원가입</li>
+                <li class="move" moveHref="login.html"></li>
+                <li class="toMapBtn"></li>
+            </ul>
+        </div>
+    </div>
+    <!-------------- 탑박스2 -------------->
+    <div id="top_box2">
+        <!----------- 탑 로고 ----------->
+        <div id="top_logo"><img src="images/logo.png" /></div>
+        <!----------- 탑 네비 ----------->
+        <nav id="top_Nav">
+            <ul class="top_mainUl">
+                <li class="top_mainLi">
+                    <span>NEW</span>
+                </li>
+                <li class="top_mainLi">
+                    <span>WOMEN</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">ALL</li>
+                        <li class="top_subLi">JEANS</li>
+                        <li class="top_subLi">TOP</li>
+                        <li class="top_subLi">BOTTOM</li>
+                        <li class="top_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="top_mainLi">
+                    <span>MEN</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">ALL</li>
+                        <li class="top_subLi">JEANS</li>
+                        <li class="top_subLi">TOP</li>
+                        <li class="top_subLi">BOTTOM</li>
+                        <li class="top_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="top_mainLi">
+                    <span>501&reg;</span>
+                </li>
+                <li class="top_mainLi">
+                    <span>L'STORY</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">Levi's Vintage Clothing</li>
+                        <li class="top_subLi">Live In Levi's</li>
+                        <li class="top_subLi">501&reg; History</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!----------- 탑 검색창 ----------->
+        <form class="searchBox top">
+            <div class="searchIcon top"></div>
+            <input class="searchBar top" type="text" name="search" />
+        </form>
+        <!----------- 탑 네비모달 열기 버튼 (모바일) ----------->
+        <button class="nmOpenBtn top">
+            <div class="nmOpen top"></div>
+            <div class="nmOpen top"></div>
+        </button>
+    </div>
+</div>
+<!---------------------- 네비모달 (모바일) ---------------------->
+<div id="navModal">
+    <div id="navModalBox">
+        <!----------- 네비모달 닫기 버튼 ----------->
+        <button id="nmClose">
+            <div class="nmClose"></div>
+            <div class="nmClose"></div>
+        </button>
+       <!----------- 네비모달 퀵메뉴 ----------->
+        <div class="quickmenu nm">
+            <ul>
+                <li class="move" moveHref="register.html">회원가입</li>
+                <li class="move" moveHref="login.html"></li>
+                <li class="toMapBtn"></li>
+            </ul>
+        </div>
+        <!----------- 네비모달 네비 ----------->
+        <nav id="nm_Nav">
+            <ul class="nm_mainUl">
+                <li class="nm_mainLi">
+                    <span>NEW</span>
+                </li>
+                <li class="nm_mainLi">
+                    <span>WOMEN</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">ALL</li>
+                        <li class="nm_subLi">JEANS</li>
+                        <li class="nm_subLi">TOP</li>
+                        <li class="nm_subLi">BOTTOM</li>
+                        <li class="nm_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="nm_mainLi">
+                    <span>MEN</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">ALL</li>
+                        <li class="nm_subLi">JEANS</li>
+                        <li class="nm_subLi">TOP</li>
+                        <li class="nm_subLi">BOTTOM</li>
+                        <li class="nm_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="nm_mainLi">
+                    <span>501&reg;</span>
+                </li>
+                <li class="nm_mainLi">
+                    <span>L'STORY</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">Levi's Vintage Clothing</li>
+                        <li class="nm_subLi">Live In Levi's</li>
+                        <li class="nm_subLi" >501&reg; History</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!----------- 네비모달 검색창 ----------->
+        <form class="searchBox nm">
+            <div class="searchIcon nm"></div>
+            <input class="searchBar nm" type="text" name="search" />
+        </form>
+    </div>
+</div>
+
+
+
+<!-------------------------------------------------------------------------------------- PRODUCTS -->
+<!-------------------------------------------------------------- PRODUCT : lnb -->
+<header id="pd_header">
+    <h1 id="pd_tit">MEN</h1>
+    <nav id="pd_lnb">
+        <ul id="pd_lnb_ul">
+            <li class="pd_lnb_li active">ALL</li>
+            <li class="pd_lnb_li">JEANS</li>
+            <li class="pd_lnb_li">TOP</li>
+            <li class="pd_lnb_li">BOTTOM</li>
+            <li class="pd_lnb_li">ACC</li>
+        </ul>
+    </nav>
+</header>
+
+<div class="pd_outContainer">
+    <!-- (배경 데코 라인) -->
+    <span class="line_v pd"></span>
+    <span class="line_h pd h1"></span>
+    <span class="line_h pd h2"></span>
+    <span class="line_h pd h3"></span>
+    <span class="line_h pd h4"></span>
+    <!-- (배경 데코 사각형) -->
+    <span class="square square1"></span>
+    <span class="square square2"></span>
+    <span class="square square3"></span>
+    <span class="square square4"></span>
+    <span class="square square5"></span>
+    <span class="square square6"></span>
+    <span class="square square7"></span>
+    <span class="square square8"></span>
+    <span class="square square9"></span>
+    <span class="square square10"></span>
+    
+    <!-------------------------------------------------------------- MEN_ALL -->
+    <div class="container hd">
+    <!---------------------- 헤더 ---------------------->
+    <header id="men_hd">
+        <!----------- 슬라이드 박스 ----------->
+        <div class="hd_slideContainer pc swiper-container">
+            <!-- 슬라이드 -->
+            <div class="hd_slideBox pc swiper-wrapper">
+                <div class="hd_slide pc swiper-slide">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/men_1.jpg" />
+                    <div class="hd_capBox">
+                        <h2>MODERN IS CLASSIC</h2>
+                        <h3>무엇보다 현대적인 클래식 아이템 집중탐구</h3>
+                    </div>
+                </div>
+                <div class="hd_slide pc swiper-slide">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/men_2.jpg" />
+                    <div class="hd_capBox">
+                        <h2>2020 SWIM WEARS</h2>
+                        <h3>해변에서 본 바로 그 스윔웨어</h3>
+                    </div>
+                </div>
+                <div class="hd_slide pc swiper-slide">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/men_3.jpg" />
+                    <div class="hd_capBox">
+                        <h2>BRAVE ACC EVER</h2>
+                        <h3>시선을 가져오는 또 하나의 방법</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- 슬라이드 컨트롤러 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </header>
+    
+    <!---------------------- 섹션 ---------------------->
+    <div class="container products">
+        <!------ 필터 ------>
+        <div id="filterBox">
+            <div id="count" class="itemsBtn active">ALL</div>
+            <div id="filterBtn" class="itemsBtn"><img src="images/pd/filter.png" /></div>
+            <div id="filter">
+                <!-------- 옵션 -------->
+                <form>
+                <!-- 옵션 : 컬러 -->
+                <div class="lowBox option">
+                    <div class="flex_between">
+                        <h2 class="subTit">COLOR</h2>
+                        <div class="opt-colors">
+                            <input id="color_1" type="checkbox" name="color" />
+                            <label id="color_1_label" for="color_1" title="화이트"></label>
+                            
+                            <input id="color_2" type="checkbox" name="color" />
+                            <label id="color_2_label" for="color_2" title="살몬"></label>
+                            
+                            <input id="color_3" type="checkbox" name="color" />
+                            <label id="color_3_label" for="color_3" title="골드"></label>
+                            
+                            <input id="color_4" type="checkbox" name="color" />
+                            <label id="color_4_label" for="color_4" title="블루"></label>
+                            
+                            <input id="color_5" type="checkbox" name="color" />
+                            <label id="color_5_label" for="color_5" title="다크블루"></label>
+                            
+                            <input id="color_6" type="checkbox" name="color" />
+                            <label id="color_6_label" for="color_6" title="네이비"></label>
+                            
+                            <input id="color_7" type="checkbox" name="color" />
+                            <label id="color_7_label" for="color_7" title="라이트 핑크"></label>
+                            
+                            <input id="color_8" type="checkbox" name="color" />
+                            <label id="color_8_label" for="color_8" title="코랄"></label>
+                            
+                            <input id="color_9" type="checkbox" name="color" />
+                            <label id="color_9_label" for="color_9" title="핑크"></label>
+                            
+                            <input id="color_10" type="checkbox" name="color" />
+                            <label id="color_10_label" for="color_10" title="라이트퍼플"></label>
+                            
+                            <input id="color_11" type="checkbox" name="color" />
+                            <label id="color_11_label" for="color_11" title="바이올렛"></label>
+                            
+                            <input id="color_12" type="checkbox" name="color" />
+                            <label id="color_12_label" for="color_12" title="네온 엘로우"></label>
+                            
+                            <input id="color_13" type="checkbox" name="color" />
+                            <label id="color_13_label" for="color_13" title="오렌지"></label>
+                            
+                            <input id="color_14" type="checkbox" name="color" />
+                            <label id="color_14_label" for="color_14" title="라임"></label>
+                            
+                            <input id="color_15" type="checkbox" name="color" />
+                            <label id="color_15_label" for="color_15" title="라이트 카키"></label>
+                            
+                            <input id="color_16" type="checkbox" name="color" />
+                            <label id="color_16_label" for="color_16" title="블랙"></label>
+                        </div>
+                    </div>
+                    <!-- 옵션 : 사이즈 -->
+                    <div class="flex_between">
+                        <h2 class="subTit">SIZE</h2>
+                        <div class="opt-size">
+                            <div>
+                                <input id="size_1" class="size" type="checkbox" name="size" value="XS" />
+                                <label for="size_1">XS</label>
+                            </div>
+                            <div>
+                                <input id="size_2" class="size" type="checkbox" name="size" value="S" />
+                                <label for="size_2">S</label>
+                            </div>
+                            <div>
+                                <input id="size_3" class="size" type="checkbox" name="size" value="M" />
+                                <label for="size_3">M</label>
+                            </div>
+                            <div>
+                                <input id="size_4" class="size" type="checkbox" name="size" value="L" />
+                                <label for="size_4">L</label>
+                            </div>
+                            <div>
+                                <input id="size_5" class="size" type="checkbox" name="size" value="XL" />
+                                <label for="size_5">XL</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 옵션 : 가격 -->
+                    <div class="flex_between">
+                        <h2 class="subTit">PRICE</h2>
+                        
+                        <div class="opt-price">
+                            <div>
+                                <input id="price_range1" type="radio" name="filter-radio" data-group="price" data-min="0" data-max="49990">
+                                <label class="price_label" for="price_range1">5만원 미만</label>
+                            </div>
+                            <div>
+                                <input id="price_range2" type="radio" name="filter-radio" data-group="price" data-min="50000" data-max="99990">
+                                <label class="price_label" for="price_range2">5만원 ~ 10만원 미만</label>
+                            </div>
+                            <div>
+                                <input id="price_range3" type="radio" name="filter-radio" data-group="price" data-min="100000" data-max="199990">
+                                <label class="price_label" for="price_range3">10만원 ~ 20만원 미만</label>
+                            </div>
+                            <div>
+                                <input id="price_range4" type="radio" name="filter-radio" data-group="price" data-min="200000" data-max="299990">
+                                <label class="price_label" for="price_range4">20만원 ~ 30만원 미만</label>
+                            </div>
+                            <div>
+                                <input id="price_range4" type="radio" name="filter-radio" data-group="price" data-min="300000" data-max="999990">
+                                <label class="price_label" for="price_range4">30만원 이상</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                </form>
+                <!-------- 버튼 -------->
+                <div class="lowBox btn flex_between">
+                    <button id="reset" class="filterBtn">RESET</button>
+                    <button id="search" class="filterBtn">SEARCH</button>
+                </div>
+            </div>
+            <div id="itemsLine"></div>
+        </div>
+        <section id="products">
+            <!-------------- 아이템 -------------->
+            <div id="items">
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_1.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">백 포켓 토트백</h3>
+                        <p class="price">28,000</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_9.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">마운틴 셔츠</h3>
+                        <p class="price">158,000</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_5.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">X PEANUTS 풋볼 티셔츠</h3>
+                        <p class="price">40,000</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/new/men/mc_1.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">드로코드 유틸리티 팬츠</h3>
+                        <p class="price">141,900</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_4.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">박스탭 로고 티셔츠</h3>
+                        <p class="price">29,500</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/new/men/lvc_3.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">501® '55 맨즈 진</h3>
+                        <p class="price">260,000</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_8.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">X PEANUTS 쇼트 슬리브 스웨트셔츠</h3>
+                        <p class="price">60,000</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_7.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">'93 스트레이트 진</h3>
+                        <p class="price">89,500</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_10.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">선셋 포켓 티셔츠</h3>
+                        <p class="price">29,500</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_2.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">플렉스핏 베이스볼 캡 블루</h3>
+                        <p class="price">25,000</p>
+                    </div>
+                </div>
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_3.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">플렉스핏 베이스볼 캡 레드</h3>
+                        <p class="price">25,000</p>
+                    </div>
+                </div>   
+                <div class="items_box">
+                    <img class="wow fadeIn" data-wow-duration="1s" src="images/pd/men/items/item_6.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">프라이드 베이스볼 캡</h3>
+                        <p class="price">25,000</p>
+                    </div>
+                </div>   
+            </div>
+            
+            <button id="moreBtn"><img src="images/right_b.png" /></button>
+        </section>
+    </div>
+    
+    </div><!--//container hd-->
+    
+    <!-------------------------------------------------------------------------------------- 푸터 -->
+    <footer id="footer">
+        <div class="container ft">
+            <!-------------- 푸터 : address -------------->
+            <address id="address">
+                <ul>
+                    <li>회사소개</li>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                    <li>사이트맵</li>
+                </ul>
+
+                <p class="ft_p1">리바이스트라우스 코리아 주식회사 | 대표이사 : 파스칼센코프 | 개인정보관리책임자:파스칼센코프 | 서울특별시 강남구 도산대로 414, 한성빌딩 11층 사업자등록번호 : 120-81-00074 | 통신판매업 신고번호 : 제 2017-서울강남-02417 호 , 사업자정보확인 | 호스팅 사업자 : salesforce.com, inc. | NHN KCP를 통해 신용카드 결제 및 구매안전서비스를 제공합니다.</p>
+
+                <p class="ft_p2">Levi Strauss Korea Ltd. 2020 All Rights Reserved.</p>
+            </address>
+
+            <!-------------- 푸터 : sns -------------->
+            <div id="snsBox">
+                <img src="images/sns_instagram.png" />
+                <img src="images/sns_facebook2.png" />
+                <img src="images/sns_youtube.png" />
+            </div>
+
+        </div>
+    </footer>
+    
+</div><!--//pd_outContainer-->
+    
+    
+
+
+
+
+
+
+<!------------------------ swiper slider ------------------------>
+<script src="js/plugIn/swiper/swiper-bundle.js"></script>
+<script>
+    
+    /* 슬라이더 */
+    function swiper(){
+
+        var swiper = new Swiper('.hd_slideContainer', {
+
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    }
+    
+    $(document).ready(function(){
+        
+        toggleClass();
+    });
+
+    $(window).resize(function(){
+        
+        toggleClass();
+        
+        if($(window).width()>=1033){
+            
+            location.reload();
+        }
+    });
+    
+    // 클래스 제거
+    function toggleClass(){
+        
+        if($(window).width()<1033){
+            
+            $('.hd_slideContainer').removeClass('pc');
+            $('.hd_slideBox').removeClass('pc');
+            $('.hd_slide').removeClass('pc');
+            
+            $('.hd_slideContainer').addClass('swiper-container');
+            $('.hd_slideBox').addClass('swiper-wrapper');
+            $('.hd_slide').addClass('swiper-slide');
+            
+            swiper();
+        }else{
+            
+            $('.hd_slideContainer').removeClass('swiper-container');
+            $('.hd_slideBox').removeClass('swiper-wrapper');
+            $('.hd_slide').removeClass('swiper-slide');
+            
+            $('.hd_slideContainer').addClass('pc');
+            $('.hd_slideBox').addClass('pc');
+            $('.hd_slide').addClass('pc');
+        }
+    }
+    
+
+</script>
+
+
+</body>
+</html>

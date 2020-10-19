@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Seohyun Jeong">
+<meta name="format-detection" content="telephone=no" />
+<title> Levi's detail </title>
+
+<!----- Favicon ----->
+<link href="images/favicon.ico" rel="shortcut icon" />
+
+<!---------- CSS ---------->
+<!-- animate -->
+<link href="css/plugIn/animate.css" rel="stylesheet" />
+<!-- swiper slider -->
+<link href="js/plugIn/swiper/swiper-bundle.css" rel="stylesheet" />
+<!-- 공통 -->
+<link href="css/reset.css" rel="stylesheet" />
+<link href="css/gnb.css" rel="stylesheet" />
+<link href="css/footer.css" rel="stylesheet" />
+<!-- DETAIL -->
+<link href="css/detail.css" rel="stylesheet" />
+
+<!---------- JS ---------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!-- easeScroll -->
+<script src="js/plugIn/jquery.easeScroll.js"></script>
+<!-- 공통 -->
+<script src="js/gnb.js"></script>
+<!-- DETAIL -->
+<script src="js/detail.js"></script>
+
+
+</head>
+
+<body>
+<!-------------------------------------------------------------------------------------- GNB -->
+<!---------------------- 탑박스 ---------------------->
+<div id="top_container">
+    <!-------------- 탑박스1 -------------->
+    <div id="top_box1">
+        <!----------- 탑 퀵메뉴 ----------->
+        <div class="quickmenu top">
+            <ul>
+                <li class="move" moveHref="register.html">회원가입</li>
+                <li class="move" moveHref="login.html"></li>
+                <li class="toMapBtn"></li>
+            </ul>
+        </div>
+    </div>
+    <!-------------- 탑박스2 -------------->
+    <div id="top_box2">
+        <!----------- 탑 로고 ----------->
+        <div id="top_logo"><img src="images/logo.png" /></div>
+        <!----------- 탑 네비 ----------->
+        <nav id="top_Nav">
+            <ul class="top_mainUl">
+                <li class="top_mainLi">
+                    <span>NEW</span>
+                </li>
+                <li class="top_mainLi">
+                    <span>WOMEN</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">ALL</li>
+                        <li class="top_subLi">JEANS</li>
+                        <li class="top_subLi">TOP</li>
+                        <li class="top_subLi">BOTTOM</li>
+                        <li class="top_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="top_mainLi">
+                    <span>MEN</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">ALL</li>
+                        <li class="top_subLi">JEANS</li>
+                        <li class="top_subLi">TOP</li>
+                        <li class="top_subLi">BOTTOM</li>
+                        <li class="top_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="top_mainLi">
+                    <span>501&reg;</span>
+                </li>
+                <li class="top_mainLi">
+                    <span>L'STORY</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">Levi's Vintage Clothing</li>
+                        <li class="top_subLi">Live In Levi's</li>
+                        <li class="top_subLi">501&reg; History</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!----------- 탑 검색창 ----------->
+        <form class="searchBox top">
+            <div class="searchIcon top"></div>
+            <input class="searchBar top" type="text" name="search" />
+        </form>
+        <!----------- 탑 네비모달 열기 버튼 (모바일) ----------->
+        <button class="nmOpenBtn top">
+            <div class="nmOpen top"></div>
+            <div class="nmOpen top"></div>
+        </button>
+    </div>
+</div>
+<!---------------------- 네비모달 (모바일) ---------------------->
+<div id="navModal">
+    <div id="navModalBox">
+        <!----------- 네비모달 닫기 버튼 ----------->
+        <button id="nmClose">
+            <div class="nmClose"></div>
+            <div class="nmClose"></div>
+        </button>
+       <!----------- 네비모달 퀵메뉴 ----------->
+        <div class="quickmenu nm">
+            <ul>
+                <li class="move" moveHref="register.html">회원가입</li>
+                <li class="move" moveHref="login.html"></li>
+                <li class="toMapBtn"></li>
+            </ul>
+        </div>
+        <!----------- 네비모달 네비 ----------->
+        <nav id="nm_Nav">
+            <ul class="nm_mainUl">
+                <li class="nm_mainLi">
+                    <span>NEW</span>
+                </li>
+                <li class="nm_mainLi">
+                    <span>WOMEN</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">ALL</li>
+                        <li class="nm_subLi">JEANS</li>
+                        <li class="nm_subLi">TOP</li>
+                        <li class="nm_subLi">BOTTOM</li>
+                        <li class="nm_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="nm_mainLi">
+                    <span>MEN</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">ALL</li>
+                        <li class="nm_subLi">JEANS</li>
+                        <li class="nm_subLi">TOP</li>
+                        <li class="nm_subLi">BOTTOM</li>
+                        <li class="nm_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="nm_mainLi">
+                    <span>501&reg;</span>
+                </li>
+                <li class="nm_mainLi">
+                    <span>L'STORY</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">Levi's Vintage Clothing</li>
+                        <li class="nm_subLi">Live In Levi's</li>
+                        <li class="nm_subLi" >501&reg; History</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!----------- 네비모달 검색창 ----------->
+        <form class="searchBox nm">
+            <div class="searchIcon nm"></div>
+            <input class="searchBar nm" type="text" name="search" />
+        </form>
+    </div>
+</div>
+
+
+
+<!-------------------------------------------------------------------------------------- DETAIL -->
+<div id="dt_container">
+
+<!---------------------- 좌측 이미지 박스 ---------------------->
+<section id="dt_imgBox">
+    <!----------- 슬라이드 박스 ----------->
+    <div class="img_slideContainer swiper-container">
+        <!-- 슬라이드 -->
+        <div class="img_slideBox swiper-wrapper">
+            <div class="img_slide swiper-slide">
+                <img src="images/pd/detail/dt_1_1.jpg" />
+            </div>
+            <div class="img_slide swiper-slide">
+                <img src="images/pd/detail/dt_1_2.jpg" />
+            </div>
+            <div class="img_slide swiper-slide">
+                <img src="images/pd/detail/dt_1_3.jpg" />
+            </div>
+        </div>
+        <!-- 슬라이드 컨트롤러 -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+    
+    
+<!---------------------- 우측 텍스트 박스 ---------------------->
+<section id="dt_txtBox">
+    <div id="dt_txtContainer">
+        <!-------- 타이틀 박스 -------->
+        <div class="lowBox tit">
+            <p id="tag">LEVI'S® Premium</p>
+            <h1 id="name">드루 윈드브레이커</h1>
+            <p id="price">89,500 <span>원</span></p>
+        </div>
+        <!-------- 옵션 -------->
+        <!-- 옵션 : 컬러 -->
+        <div class="lowBox option">
+            <div class="flex_between">
+                <h2 class="subTit">COLOR</h2>
+                <span>
+                    <input class="dot color1" type="radio" name="color" checked />
+                    <input class="dot color2" type="radio" name="color" />
+                    <input class="dot color3" type="radio" name="color" />
+                </span>
+            </div>
+            <!-- 옵션 : 사이즈 -->
+            <div class="flex_between">
+                <h2 class="subTit">SAZE</h2>
+                <form>
+                    <select id="size_select" name="size">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </form>
+            </div>
+            <!-- 옵션 : 수량 -->
+            <div class="flex_between">
+                <h2 class="subTit">QTY</h2>
+                <select id="qty_select" name="quatity">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+        </div>
+        <!-------- 구매 버튼 -------->
+        <div class="lowBox get flex_between">
+            <button class="getBtn">장바구니</button>
+            <button class="getBtn">바로구매</button>
+        </div>
+        <!-------- 추가 정보 -------->
+        <div class="lowBox moreInfo">
+            <h2 class="subTit details">DETAILS</h2>
+            <p class="moreInfo">스포티한 윈드 브레이커는 90년대에 영감을 받아 탄생했습니다. 모던하게 떨어진 어깨와 그물 소재의 안감이 편안함을 줍니다. 더욱 빈티지한 느낌을 위해 리바이스®모노그램 로고가 가슴에 부착되어 있습니다.</p>
+        
+            <h2 class="subTit materials">MATERIALS</h2>
+            <ul class="moreInfo">
+                <li>100% 나일론</li>
+                <li>심플한 라인</li>
+                <li>벨트 포켓</li>
+            </ul>
+       </div>
+       
+        
+    </div>
+    
+    
+</section>
+
+<!---------------------- 하단 박스 ---------------------->
+
+<section id="dt_bottomBox">
+    <div id="dt_botContainer">
+
+        <!----------- 슬라이드 박스 ----------->
+        <div class="bot_slideContainer swiper-container">
+            <!-- 슬라이드 -->
+            <div class="bot_slideBox swiper-wrapper">
+                <div class="bot_slide dt_bot swiper-slide">
+                   <!-- 타이틀 박스 -->
+                    <div class="titBox dt_bot">
+                        <h3>YOU MAY ALSO LIKE</h3>
+                        <P>어울리는 제품</P>
+                    </div>
+                    <img src="images/pd/detail/rec/rec_1.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">벌룬 레그 팬츠</h3>
+                        <p class="price">82,900</p>
+                    </div>
+                </div>
+                <div class="bot_slide swiper-slide">
+                    <img src="images/pd/detail/rec/rec_2.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">하이 라이즈 스커트</h3>
+                        <p class="price">49,500</p>
+                    </div>
+                </div>
+                <div class="bot_slide swiper-slide">
+                    <img src="images/pd/detail/rec/rec_3.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">유틸리티 점프수트</h3>
+                        <p class="price">126,000</p>
+                    </div>
+                </div>
+                <div class="bot_slide swiper-slide">
+                    <img src="images/pd/detail/rec/rec_4.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">에스터 셔츠</h3>
+                        <p class="price">76,000</p>
+                    </div>
+                </div>
+                <div class="bot_slide swiper-slide">
+                    <img src="images/pd/detail/rec/rec_5.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">화이트 슬림 팬츠</h3>
+                        <p class="price">82,100</p>
+                    </div>
+                </div>
+                <div class="bot_slide swiper-slide">
+                    <img src="images/pd/detail/rec/rec_6.jpg" />
+                    <div class="capBox">
+                        <h3 class="name">711 스키니 앵클 진</h3>
+                        <p class="price">69,000</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+    </div>   
+</section>
+
+   
+   
+</div><!--//dt_container -->
+   
+   
+   
+   
+   
+   
+   
+   
+   
+<!-------------------------------------------------------------------------------------- 푸터 -->
+<footer id="footer">
+    <div class="container ft">
+        <!-------------- 푸터 : address -------------->
+        <address id="address">
+            <ul>
+                <li>회사소개</li>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>사이트맵</li>
+            </ul>
+
+            <p class="ft_p1">리바이스트라우스 코리아 주식회사 | 대표이사 : 파스칼센코프 | 개인정보관리책임자:파스칼센코프 | 서울특별시 강남구 도산대로 414, 한성빌딩 11층 사업자등록번호 : 120-81-00074 | 통신판매업 신고번호 : 제 2017-서울강남-02417 호 , 사업자정보확인 | 호스팅 사업자 : salesforce.com, inc. | NHN KCP를 통해 신용카드 결제 및 구매안전서비스를 제공합니다.</p>
+
+            <p class="ft_p2">Levi Strauss Korea Ltd. 2020 All Rights Reserved.</p>
+        </address>
+
+        <!-------------- 푸터 : sns -------------->
+        <div id="snsBox">
+            <img src="images/sns_instagram.png" />
+            <img src="images/sns_facebook2.png" />
+            <img src="images/sns_youtube.png" />
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+
+
+<!------------------------ swiper slider ------------------------>
+<script src="js/plugIn/swiper/swiper-bundle.js"></script>
+<script>
+    
+    /* dt_imgBox 슬라이더 */
+    function imgBoxSwiper(){
+
+        var imgBoxSwiper = new Swiper('.img_slideContainer', {
+
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    }
+    
+    $(document).ready(function(){
+        
+        imgBoxClass();
+    });
+
+    $(window).resize(function(){
+        
+        imgBoxClass();
+        
+        if($(window).width()>=1033){
+            
+            location.reload();
+        }
+    });
+    
+    // imgBoxswiper 클래스 제거
+    function imgBoxClass(){
+        
+        if($(window).width()<1033){
+            
+            $('.img_slideContainer').addClass('swiper-container');
+            $('.img_slideBox').addClass('swiper-wrapper');
+            $('.img_slide').addClass('swiper-slide');
+            
+            imgBoxSwiper();
+        }else{
+            
+            $('.img_slideContainer').removeClass('swiper-container');
+            $('.img_slideBox').removeClass('swiper-wrapper');
+            $('.img_slide').removeClass('swiper-slide');
+        }
+    }
+    
+    
+    /* dt_bottomBox 슬라이더 */
+    var bottomBoxSwiper = new Swiper('.bot_slideContainer', {
+
+        slidesPerView: 2,
+        spaceBetween: 10,
+        centeredSlides: true,
+        freeMode: true,
+        pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        },
+        breakpoints: {
+            850: {
+                slidesPerView: 3
+            },
+            1050: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
+        }
+    });
+    
+    
+    
+    
+
+</script>
+    
+
+</body>
+</html>

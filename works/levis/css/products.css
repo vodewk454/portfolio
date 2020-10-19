@@ -1,0 +1,104 @@
+/********** PRODUCTS **********/
+@charset "UTF-8";
+
+
+/************************* 탑박스 *************************/
+#top_container.pd {background: transparent;}
+#top_container.pd.active {background: #fff;}
+
+
+/************************* 헤더 lnb *************************/
+#pd_header {z-index: 301; position: absolute; top: 150px; left: 50%; transform: translateX(-50%); text-align: center;}
+#pd_header.scroll {position: fixed; top: 15px;}
+
+#pd_tit {margin-bottom: 35px; font-size: 2.7rem; font-weight: 400; color: #000; cursor: pointer; font-family: 'Poiret One', cursive;}
+#pd_lnb {font-family: 'Roboto Condensed', sans-serif;}
+#pd_lnb_ul {display: flex; justify-content: center;}
+.pd_lnb_li {margin: 0 10px; font-size: .9rem; color: #666;}
+.pd_lnb_li.active {text-decoration: underline; color: #000;}
+
+
+/* 섹션~푸터 컨테이너 (배경 데코 라인용) */
+.pd_outContainer {position: relative; width: 100%; height: 100%;}
+/************************* 섹션 *************************/
+/* 배경 데코 라인 */
+.line_v.pd {z-index: -1; top: -15%; height: 115%;}
+.line_h.pd.h1  {z-index: -1; top: 5%;}
+.line_h.pd.h2  {z-index: -1; top: 30%;}
+.line_h.pd.h3  {z-index: -1; top: 60%;}
+.line_h.pd.h4  {z-index: -1; top: 85%;}
+/* 배경 데코 사각 */
+.square {z-index: -1; position: absolute; content: ''; width: 20px; height: 5px; background: #eee;}
+.square.square1 {top: 3%; left: 10%;}
+.square.square2 {top: 8%; left: 95%;}
+.square.square3 {top: 19%; left: 78%;}
+.square.square4 {top: 28%; left: 10%;}
+.square.square5 {top: 44%; left: 10%;}
+.square.square6 {top: 52%; left: 93%;}
+.square.square7 {top: 57%; left: 90%;}
+.square.square8 {top: 75%; left: 15%;}
+.square.square9 {top: 91.4%; left: 40%;}
+.square.square10 {top: 93%; left: 3%;}
+
+section {overflow: hidden; margin-bottom: 100px;}
+
+/* 태그 */
+.tag_collection {position: absolute; color: #888; font-size: .8rem; font-family: 'Raleway', sans-serif;}
+.tag_collection b {color: #222; font-size: .8rem;}
+.tag_collection {top: 0; right: 0; transform: translate(25%,400%) rotate(-90deg);}
+/* 캡션 */
+.capBox {margin-top: 20px;}
+.name {font-size: 1.05rem; font-weight: 400; cursor: pointer;}
+.price {font-size: .97rem; font-weight: 300; color: #666;}
+/* 팝업 */
+.popup {display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: absolute; bottom: -50px; right: 50px; transform: translateY(-100%); width: 200px; height: 150px; background: rgba(255,255,255,.8);}
+.popTxtBox {text-align: center;}
+.popTit {margin-bottom: 5px; font-size: 1.1rem; color: #333;}
+.popTxt {line-height: 120%; font-size: .8rem; font-weight: 200; color: #888;}
+.popClose {position: absolute; top: 0; right: 3px; border: none; background: transparent; color: #ddd; font-size: 2rem;}
+
+
+
+/************************************************************************************* 1400px */
+@media screen and (max-width: 1400px){
+    
+    /************************* 헤더 lnb *************************/
+    #pd_header {margin-left: 10%;}
+}
+
+/* 모바일 */
+/************************************************************************************* 1050px */
+@media screen and (max-width: 1050px){
+    
+    /************************* 탑박스 *************************/
+    #top_container.pd {background: #fff;}
+    
+    /************************* 헤더 lnb *************************/
+    #pd_header {position: fixed; top: 10px; margin-left: 0; transition: .3s;}
+    #pd_header.scroll_m {position: fixed; top: -35px;}
+    #pd_tit {font-size: 2.3rem;}
+    #pd_lnb {transition: .3s;}
+    #pd_lnb.scroll {opacity: 0;}
+}
+
+/************************************************************************************* 600px */
+@media screen and (max-width: 600px){
+    
+    /************************* 헤더 lnb *************************/
+    #pd_tit {font-size: 2.2rem;}
+    #pd_lnb {position: relative; margin-top: 50px; margin-left: 80px;}
+    #pd_lnb::after {position: absolute; top: 0; right: -23px; content: ''; width: 30px; height: 24px; background: url(../images/pd/pd_deco.png) center no-repeat; transform: scale(.6);}
+    #pd_lnb_ul {display: block; text-align: right;}
+    .pd_lnb_li {line-height: 160%; font-weight: 300;}
+}
+
+/************************************************************************************* 400px */
+@media screen and (max-width: 400px){
+    
+    /************************* 헤더 lnb *************************/
+    #pd_tit {font-size: 1.8rem;}
+}
+
+
+
+

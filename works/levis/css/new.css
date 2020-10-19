@@ -1,0 +1,142 @@
+/********** NEW **********/
+@charset "UTF-8";
+ 
+
+
+
+.container.new {display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 100%; padding-left: 30px; padding-right: 30px;}
+/******** 서브타이틀 ********/
+.subTitBox {position: relative; margin-bottom: 50px; width: 100%;}
+.subTitBg {width: 80%; height: 800px;}
+.subTit_m {display: none;} /* max-width: 600px */
+.subTit {opacity: 0; position: absolute; padding: 80px 100px; top: 95%; left: 40%; transform: translateY(-100%); width: 60%;}
+.subTit span {display: block; font-weight: 600; font-family: 'Nothing You Could Do', cursive;}
+.subTit h2 {margin-top: -5px; font-size: 4rem; font-weight: 400; color: #444; font-family: 'Nothing You Could Do', cursive;}
+.subTit p {width: 70%; min-width: 300px; font-weight: 300;}
+/* more버튼 */
+.moreBtn {margin-top: 25px; width: 180px; height: 50px; background: transparent; border: 1px solid #ccc; color: #afafaf; font-size: .95rem;}
+.moreBtn > img {margin-bottom: -3px; margin-left: 10px; width: 15px; cursor: pointer;}
+/******** 상품 ********/
+.itemBox {position: relative; margin-bottom: 50px; width: calc(100% /4 - 20px);}
+.itemBox > img {display: block; width: 100%; cursor: pointer;}
+.itemBox.half {width: calc(100% /2 - 15px);}
+
+
+/**************** 섹션 pm ****************/
+#pm {margin-top: 350px;}
+.container.pm {}
+/******** 서브타이틀 ********/
+.subTitBox.pm {margin-bottom: 50px; padding: 0 30px;}
+.subTitBg.pm {margin: 0 auto; width: 100%; max-width: 950px; height: 1400px; background: url(../images/pd/new/pm_tit.jpg) center; background-size: cover;}
+.subTit.pm {background: rgb(238 231 221 / 97%);}
+.subTit.pm span {}
+.subTit.pm h2 {}
+.subTit.pm p {width: 40%;}
+
+/**************** 섹션 mc ****************/
+#mc {}
+.container.mc {}
+/******** 서브타이틀 ********/
+.subTitBox.mc {}
+.subTitBg.mc {background: url(../images/pd/new/mc_tit.jpg) center; background-size: cover;}
+.subTit.mc {background: rgb(165 175 187 / 97%); color: #fff;}
+.subTit.mc h2 {width: 120%; color: #fff;}
+.subTit.mc p {}
+
+/**************** 섹션 lvc ****************/
+#lvc {}
+.container.lvc {}
+/******** 서브타이틀 ********/
+.subTitBox.lvc {}
+.subTitBg.lvc {background: url(../images/pd/new/lvc_tit.jpg) center; background-size: cover;}
+.subTit.lvc {background: rgb(228 195 195 / 97%);}
+.subTit.lvc h2 {width: 120%; color: #222;}
+.subTit.lvc p {color: #222;}
+.moreBtn.lvc {margin-top: 50px; width: 200px; border: 1px solid #222; color: #222;}
+
+
+/** 스크롤 등장 애니메이션 **/
+.subTitBg.pm.scroll {animation: toTop .8s both;}
+@keyframes toTop {
+    from {opacity: 0; transform: translateY(50px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
+.subTit.pm.scroll, .subTit.mc.scroll, .subTit.lvc.scroll {animation: fromR 1s both;}
+.subTit.pm.scroll span, .subTit.mc.scroll span, .subTit.lvc.scroll span {animation: fromR2 1s .2s both;}
+.subTit.pm.scroll h2, .subTit.mc.scroll h2, .subTit.lvc.scroll h2 {animation: fromR2 1s .4s both;}
+.subTit.pm.scroll p, .subTit.mc.scroll p, .subTit.lvc.scroll p {animation: fromR2 1s .6s both;}
+.subTit.lvc.scroll .moreBtn.lvc {animation: fromR2 1s .8s both;}
+@keyframes fromR {
+    from {opacity: 0; transform: translateX(50px) translateY(-100%);}
+    to {opacity: 1; transform: translateX(0px) translateY(-100%);}
+}
+@keyframes fromR2 {
+    from {opacity: 0; transform: translateX(50px);}
+    to {opacity: 1; transform: translateX(0px);}
+}
+
+
+
+/* 모바일 */
+/************************************************************************************* 1050px */
+@media screen and (max-width: 1050px){
+    
+    /************************* 섹션 *************************/
+    .subTit h2 {font-size: 3.3rem;}
+    .itemBox {width: calc(100% /2 - 20px);}
+    .itemBox.half {width: 100%;}
+    .itemBox.blank {display: none;}
+    .itemBox.blank:nth-child(4) {display: block;}
+    /**************** 섹션 pm ****************/
+    #pm {margin-top:  200px;}
+}
+
+/************************************************************************************* 850px */
+@media screen and (max-width: 850px){
+    
+    /**************** 섹션 mc ****************/
+    .subTit {left: 10%; width: 90%;}
+}
+
+/************************************************************************************* 600px */
+@media screen and (max-width: 600px){
+
+    /************************* 섹션 *************************/
+    .container.new {padding-left: 20px; padding-right: 20px;}
+    
+    .subTit_m {display: block; position: absolute; top: 20%; left: 10%; color: #fff; font-family: 'Nothing You Could Do', cursive;}
+    .subTit_m span {display: block;}
+    .subTit_m h2 {font-size: 3.3rem; font-weight: 400;}
+    
+    .subTit {padding: 55px 75px;}
+    .subTit span {display: none;}
+    .subTit h2 {display: none;}
+    .subTit p {width: 100%; min-width: 100%; font-size: .95rem;}
+    .itemBox {width: 100%;}
+    
+    .popup {top: 40%; left: 50%; transform: translate(-50%,-50%);}
+    
+    /** 스크롤 등장 애니메이션 **/
+    .subTit_m.pm.scroll span, .subTit_m.mc.scroll span, .subTit_m.lvc.scroll span {animation: fromR2 1s both;}
+    .subTit_m.pm.scroll h2, .subTit_m.mc.scroll h2, .subTit_m.lvc.scroll h2 {animation: fromR2 1s .2s both;}
+    
+    .subTit.pm.scroll p, .subTit.mc.scroll p, .subTit.lvc.scroll p {animation: fromR2 1s both;}
+    .subTit.lvc.scroll .moreBtn.lvc {animation: fromR2 1s .2s both;}
+    
+    /**************** 섹션 pm ****************/
+    .subTitBox.pm {margin-bottom: 50px; padding: 0 20px;}
+    .subTitBg {width: 100%; height: 1000px;}
+    .subTitBg.pm {height: 1000px;}
+    
+    /**************** 섹션 lvc ****************/
+    .moreBtn.lvc {margin-top: 30px;}
+}
+
+/************************************************************************************* 400px */
+@media screen and (max-width: 400px){
+
+    /************************* 섹션 *************************/
+    .subTit_m span {font-size: .8rem;}
+    .subTit_m h2 {font-size: 2.7rem;}
+}

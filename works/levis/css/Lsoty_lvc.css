@@ -1,0 +1,144 @@
+/********** L'STORY - LVC **********/
+@charset "UTF-8";
+
+
+@font-face {font-family: 'Joseonilbomyeongjo'; src: url(../font/Joseonilbomyeongjo.woff) format('woff');}
+
+
+
+/* 공통 */
+section {overflow: hidden; position: relative; width: 100%;}
+.bg_dark {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.3);}
+ 
+.txtBox {width: 100%; max-width: 700px; font-family: 'Joseonilbomyeongjo', sans-serif;}
+.txtBox p {padding-left: 50px; line-height: 230%; font-size: 1.4rem; text-indent: 20px;}
+
+.lineTxt {display: inline-block; position: relative; font-size: inherit;}
+.line {z-index: -1; position: absolute; top: 50%; left: -10px; transform: translate(0,-50%); width: calc(100% + 15px); height: 100%; background: #000;}
+/*.line {z-index: -1; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 100%; height: 100%; background: #000;}*/
+
+
+
+
+/************** 섹션A **************/
+#secAB {background: url(../images/ls/lvc_1.jpg) center; background-size: cover; height: 200vh;}
+.bg_dark.sAB {height: 200vh;}
+.container.ls.sAB {position: relative; height: 100%;}
+
+#secA {position: absolute; position: absolute; top: 0; left: 0; height: 100vh;}
+.txtBox.sA {position: absolute; top: 50%; right: 0; transform: translateY(-50%); padding: 0 20px; color: #fff;}
+.txtBox.sA h2 {margin-bottom: 10px;}
+.txtBox.sA h1 {margin-bottom: 50px; font-size: 3.5rem;}
+.txtBox.sA p {}
+
+#secB {position: absolute; top: 50%; left: 0; height: 100vh;}
+.txtBox.sB {position: absolute; top: 35%; left: 0; transform: translateY(-50%); padding: 0 20px; color: #fff;}
+.txtBox.sB p {padding-left: 0;}
+.txtBox.sB .lineTxt {margin-left: -20px; margin-right: 20px;}
+
+/* 등장 애니메이션 */
+.bg_dark.sAB.scroll {animation: fade 3s both;}
+.txtBox.sA.scroll h2 {animation: fromR 1s both;}
+.txtBox.sA.scroll h1 {animation: fromR 1s .2s both;}
+.txtBox.sA.scroll p {animation: fromR 1s .4s both;}
+
+.txtBox.sB.scroll {animation: fromL 1s both;}
+
+@keyframes fromR{
+    from {opacity: 0; transform: translateX(50px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+@keyframes fromL{
+    from {opacity: 0; transform: translateX(-50px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+@keyframes fade{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+/************** 섹션C **************/
+#secC {position: relative; height: 200px; background: #ab8e7c;}
+.txtBox.sC {overflow: hidden; max-width: 100%;}
+.txtBox.sC h1 {display: inline-block; position: absolute; top: 50%; left: -70%; transform: translateY(-50%); white-space: nowrap; font-size: 20rem; color: rgba(255,255,255,.1); font-weight: 700; font-family: 'Roboto Condensed', sans-serif;}
+
+
+/************** 섹션D **************/
+#secD {height: 100vh;}
+.bgBox {display: flex; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.sD_bg {width: 50%; height: 100%;}
+.sD_bg.bg1 {background: url(../images/ls/lvc_2.jpg) center; background-size: cover;}
+.sD_bg.bg2 {background: url(../images/ls/lvc_3.jpg) center; background-size: cover;}
+.container.ls.sD {display: flex; justify-content: center; align-items: center; height: 100%;}
+
+.maskBox {overflow: hidden; position: relative; margin-bottom: 10px; height: 50px;}
+.maskBox p {position: absolute; top: 0; left: 48%; transform: translateX(-50%); text-align: center; font-size: 1.4rem; white-space: nowrap;}
+.maskBox mark {padding: 10px 20px; font-size: inherit; background: orange;}
+.maskBox .p1 {}
+.maskBox .p2 {}
+.maskBox .p3 {}
+
+/************** 섹션E **************/
+#secE {display: flex; align-items: center; height: 100vh; background: #000;}
+.txtBox.sE {position: relative; margin: 0 auto;}
+.sE_tit {position: absolute; top: 50%; left: 47%; transform: translate(-50%,-50%); color: #fff; font-family: 'Nothing You Could Do', cursive; text-shadow: 0 0 20px rgba(255,255,255,.6);}
+.sE_tit p {position: absolute; top: 50%; left: 50%; font-size: 15rem; font-weight: 400;}
+.sE_tit p.l {transform: translate(-50%,-80%) scale(1);}
+.sE_tit p.v {transform: translate(-50%,-50%) scale(1);}
+.sE_tit p.c {transform: translate(-50%,-20%) scale(1);}
+
+.sE_txt {margin: 0 auto; max-width: 500px; line-height: 200%; text-align: center; color: #fff;}
+.sE_txt span {font-size: 1.4rem; font-weight: 300;}
+.sE_lvc {font-size: 1.4rem; font-weight: 300; color: #fff; text-align: center;}
+
+
+
+
+
+
+/* 모바일 */
+/************************************************************************************* 1050px */
+@media screen and (max-width: 1050px){
+    
+    
+    .txtBox p {padding-left: 0;}
+}
+
+/************************************************************************************* 600px */
+@media screen and (max-width: 600px){
+    
+    .txtBox p {line-height: 180%; font-size: 1.2rem; text-indent: 15px;}
+    
+    #secAB {height: 250vh;}
+    .bg_dark.sAB {height: 250vh;}
+    #secA {height: 150vh}
+    .txtBox.sA h1 {font-size: 3.3rem;}
+    .txtBox.sB {left: 50%; transform: translateX(-50%);}
+    
+    @keyframes fromL{
+        from {opacity: 0; transform: translateX(-50px);}
+        to {opacity: 1; transform: translateX(-50%);}
+    }
+    
+    #secC {height: 130px;}
+    .txtBox.sC h1 {font-size: 13rem;}
+    
+    .sE_tit p {line-height: 230%; font-size: 10rem;}
+    .sE_txt {max-width: 350px;}
+    .sE_txt span {font-size: 1.2rem;}
+}
+
+/************************************************************************************* 400px */
+@media screen and (max-width: 400px){
+    
+    
+    
+    .sE_tit p {line-height: 230%; font-size: 7rem;}
+    .sE_txt {max-width: 250px; line-height: 150%;}
+    .sE_txt span {font-size: 1rem;}
+    
+    
+    
+}

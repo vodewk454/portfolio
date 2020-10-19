@@ -1,0 +1,874 @@
+/********** MAIN PAGE **********/
+@charset "UTF-8";
+
+/* color :
+로고 #a8112e  rgba(168,17,46)
+회색 #8d8d8d  rgba(141,141,141)
+민트색 #bdced5 
+*/
+
+
+/* preload */
+body {overflow-y: hidden;}
+#spinnerBox {z-index: 1000; display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #a8112e;}
+.spinner {width: 100px; animation: spinner 4s infinite ease-in-out;}
+
+@keyframes spinner{
+    0% {transform: scale(.8); opacity: 0;}
+    50% {transform: scale(1); opacity: 1;}
+    100% {transform: scale(.8); opacity: 0;}
+}
+
+
+/************************* 탑박스 *************************/
+#top_container {opacity: 0;}
+#top_box2 {display: none;}
+#top_box2.show {display: flex;}
+
+
+/************************* 헤더 *************************/
+#header {position: relative; height: 100vh;}
+#header::after {z-index: 30; content: ''; position: absolute; top: 70vh; left: 49%; transform: translateX(-50%); width: 100%; height: 30vh; border-top-left-radius: 20%; background: #fff;}
+
+.line_h.hd {top: 20%;}
+.line_v.hd {z-index: 31; height: 300vh;}
+
+#hd_decoBox {overflow: hidden; position: relative; width: 100%; height: 100%;}
+
+/**************** 헤더 타이틀 ****************/
+.hd_txt {z-index: 32; position: absolute; top: 40vh; right: 6%; transform: translateX(50%); width: 100px; line-height: 110%; color: #f14c3f; font-size: .8rem; font-family: 'Roboto Condensed', sans-serif;}
+.hd_txt::before {position: absolute; top: -40px; left: -10px; content: ''; width: 15px; height: 5px; background: #f14c3f;}
+.hd_tit {z-index: 32; position: absolute; top: 55vh; left: 90%; transform: translateX(-100%) skewX(-4deg); line-height: 100%; font-size: 7rem; color: #f14c3f; font-family: 'Finger Paint', cursive;}
+
+/**************** (헤더 데코) ****************/
+.hd_deco {z-index: 31; position: absolute;}
+.hd_deco img {width: 100%;}
+.hd_deco.deco1 {top: 0px; left: 55%; width: 11px;}
+.hd_deco.deco2 {top: 69%; left: 20%; width: 12px;}
+.hd_deco.deco3 {top: 85%; left: 10%; width: 15px;}
+
+#hdBox {z-index: 1; overflow: hidden; position: absolute; top: 0; left: 0; width: 80%; height: 75vh; margin-top: 50px;}
+/**************** 헤더 배경 ****************/
+#hd_bg {width: 100%; height: 100%; transition: .3s;}
+#hd_bg.active {animation: hd_bg 30s both;}
+@keyframes hd_bg{
+    from {transform: scale(1);}
+    to {transform: scale(1.3);}
+}
+#hd_video {z-index: -1; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); min-width: 100%; min-height: 100%;}
+#hd_dark {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.2); transition: .5s;}
+#hd_dark.active {background: rgba(0,0,0,.4);}
+
+.container.hd {z-index: 21; position: absolute; top: 0; left: 0; min-width: 100%; height: 100%;}
+/**************** 헤더 로고 ****************/
+#hd_logo {position: absolute; top: 50px; left: 30px; width: 90px;}
+#hd_logo img {width: 100%; cursor: pointer;}
+/**************** 헤더 네비 ****************/
+#hd_nav {position: absolute; top: 45%; left: 30px; transform: translateY(-50%);}
+.hd_mainUl {}
+.hd_mainLi {position: relative; margin-bottom: 12px; width: 100px; color: #fff; font-family: 'Roboto Condensed', sans-serif;  cursor: default;}
+.hd_mainLi span {font-size: 1.4rem; font-weight: 300; cursor: pointer;}
+.hd_subUl {display: none; position: absolute; top: 0; left: 100%; width: 150%;}
+.hd_subLi {margin-bottom: 5px; color: #fff; font-size: 1.1rem; font-weight: 300;}
+.hd_subLi:hover {color: #eee;}
+/*********** 헤더 검색창 ***********/
+.searchBox.hd {position: absolute; top: 75%; transform: translateY(-50%); left: 30px; border-bottom: none;}
+.searchIcon.hd {background: url(../images/quick_w3.png) center; background-size: cover;}
+.searchBar.hd {color: #fff;}
+/*********** 헤더 퀵메뉴 ***********/
+.quickmenu.hd {position: absolute; top: 45px; right: 30px}
+.quickmenu.hd ul li {margin-left: 15px;}
+.quickmenu.hd ul li:nth-child(1) {margin-top: -2px; color: #fff; font-size: .85rem; font-family: 'Roboto Condensed', sans-serif;}
+.quickmenu.hd ul li:nth-child(2) {width: 15px; height: 15px; background: url(../images/quick_w1.png) center; background-size: cover;}
+.quickmenu.hd ul li:nth-child(3) {width: 15px; height: 15px; background: url(../images/quick_w2.png) center; background-size: cover;}
+/*********** 헤더 닷버튼 (모바일) ***********/
+#hd_dotBox {display: none; flex-wrap: wrap; justify-content: center; align-items: center; position: absolute; top: 50%; right: 37px; transform: translateY(-50%); width: 7px; height: 25%;}
+.hd_dot {width: 7px; height: 7px; border: 1px solid rgba(255,255,255,.7); border-radius: 10px; cursor: pointer; transition: .3s;}
+.hd_dot.active {height: 30px; background: rgba(255,255,255,.7); border: none;}
+/*********** 헤더 NEW이동버튼 (모바일) ***********/
+.hd_moveBtn {display: none; padding: 15px 30px; position: absolute; top: 35vh; left: 50%; transform: translate(-50%,-50%); width: 100%; max-width: 250px; border: 1px solid #fff; background: none; color: #fff; font-size: 1.2rem;}
+.hd_moveBtn.active {display: block; animation: hd_moveBtn .5s both;}
+@keyframes hd_moveBtn{
+    from {opacity: 0; transform: translate(-50%,-50%) translateX(-50px);}
+    to {opacity: 1; transform: translate(-50%,-50%) translateX(0);}
+}
+/*********** 헤더 네비모달 열기 버튼 (모바일) ***********/
+.nmOpenBtn.hd {z-index: 30; position: absolute; top: 30px; right: 25px;}
+.nmOpen.hd {background: #fff;}
+
+/************************* 섹션 *************************/
+/*********** 섹션 타이틀 (공통) ***********/
+.titBox {opacity: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 100px;}
+.titBox h3 {position: relative; font-size: 2rem; font-weight: 400; letter-spacing: 10px; font-family: 'Poiret One', cursive;}
+.titBox h3::before {content: ''; position: absolute; top: 0; left: -17px; width: 6px; height: 6px; border-radius: 50%; background: #a8112e;}
+.titBox p {margin-left: 20px; font-weight: 300; letter-spacing: -1px;}
+/**************** 섹션 텍스트박스 (공통) ****************/
+.txtBox {width: 100%; max-width: 600px;}
+.txtBox h4 {position: relative; margin-bottom: 70px; padding-bottom: 100px; line-height: 130%; font-size: 3.5rem; color: #555;}
+.txtBox h4::after {content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 10px; background: #b4c3c9;}
+.txtBox p {margin: 0 auto; margin-bottom: 30px; width:  98%; font-size: 1.8rem; text-indent: 30px; text-align: justify; color: #333;}
+/**************** 섹션 more버튼 (공통) ****************/
+.moreBtn {margin-top: 35px; width: 180px; height: 55px; background: transparent; border: 1px solid #ccc; color: #afafaf; font-size: 1rem; transition: .3s;}
+.moreBtn img {margin-bottom: -2px; margin-left: 10px; width: 15px; cursor: pointer;}
+
+
+/**************** 섹션 bi ****************/
+#bi {overflow: hidden; position: relative; padding: 300px 0 250px 0;}
+.hd_deco.deco4 {top: 0; left: 30%; width: 15px;}
+.container.bi {z-index: 33; overflow: hidden; max-width: 100%;}
+
+.titBox.bi {margin-bottom: 150px;}
+.titBox.bi.scroll {animation: bi_toTop 1s both;}
+@keyframes bi_toTop{
+    from {opacity: 0; padding-top: 150px; margin-bottom: 200px;}
+    to {opacity: 1; padding-top: 0; margin-bottom: 150px;}
+}
+/**************** 섹션 bi : 탭버튼 ****************/
+#bi_tabBtn {display: flex; width: 100%; text-align: center;}
+#bi_tabBtn.scroll {animation: bi_toTop 1s .2s both;}
+.bi_btn {padding: 15px 0; width: 50%; border: none; border-top: 1px solid #ccc; color: #ccc; background: #fff; font-size: 1.1rem; font-family: 'Roboto Condensed', sans-serif;}
+.bi_btn.women.active {border-top: 1px solid #555; border-right: 1px solid #555; color: #555;}
+.bi_btn.men.active {border-top: 1px solid #000; border-left: 1px solid #000; color: #000;}
+
+/*********** 섹션 bi : 상품 태그 ***********/
+.tag {position: absolute; top: 130px; right: -70px; transform: translateY(-100%) rotate(-90deg); width: 180px; height: 20px; text-align: right; color: #aaa; font-size: .7rem; font-family: 'Raleway', sans-serif;}
+.tag.pm {}
+.tag.mc {}
+.tag.lvc {}
+
+/***** 섹션 bi : WOMEN *****/
+#bi_women {display: none; position: relative;}
+#bi_women.active {display: block;}
+#bi_women h4 {}
+/** 슬라이드 박스 **/
+.bi_slideBoxW {position: relative;}
+/** 슬라이드 **/
+.bi_slideW {}
+
+/***** 섹션 bi : MEN *****/
+#bi_men {display: none; position: relative;}
+#bi_men.active {display: block;}
+#bi_men h4 {}
+/** 슬라이드 박스 **/
+.bi_slideBoxM {position: relative;}
+/** 슬라이드 박스 **/
+.bi_slideM {}
+
+/*********************** 슬라이드 (공통) ***********************/
+.bi_slideImg {position: relative;}
+.bi_slideImg img {display: block; width: 100%;}
+.bi_slideImg:hover .bi_slideCapBox {opacity:1;}
+
+/*********** 슬라이드 캡션 ***********/
+.bi_slideCapBox {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,.5); opacity: 0; transition: .5s; cursor: pointer;}
+.bi_slideCap {position: absolute; bottom: 13%; left: 10%;}
+.bi_slideCap h5 {font-size: 1.9rem; font-weight: 500; cursor: pointer; color: #666; letter-spacing: -1px;}
+.bi_slideCap .price {font-size: 1.2rem; font-weight: 600; color: #a8112e; cursor: pointer;}
+
+/* swiper slider */
+.swiper-pagination-progressbar {background: rgba(0,0,0,.1);}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {background: rgba(0,0,0,.4);}
+.swiper-button-prev, .swiper-button-next {color: rgba(0,0,0,.1);}
+
+
+/**************** 섹션 pn ****************/
+#pn {position: relative; height: 340px; color: #fff; text-align: right;}
+#pn_bg {overflow: hidden; z-index: 32; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/pn.jpg) center fixed; background-size: cover;}
+#pn_dark {height: 100%; background: rgba(0,0,0,.6); transition: .5s; cursor: pointer;}
+.container.pn {display: flex; justify-content: space-between; align-items: center; height: 100%; cursor: pointer;}
+
+#pn_icon {opacity: 0; width: 80px;}
+#pn_icon.scroll {animation: pn_fromL 1.5s both;}
+@keyframes pn_fromL {
+    from {opacity: 0; transform: translateX(-50px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+/**************** 섹션 pn : 텍스트박스 ****************/
+#pn_txtBox {opacity: 0; cursor: pointer;}
+#pn_txtBox h4 {margin-right: -11px; font-size: 2rem; font-weight: 400; letter-spacing: 9px; text-transform: uppercase; cursor: pointer;}
+#pn_txtBox h4 span {display: none;}
+#pn_txtBox p {margin: 10px 0; font-size: 1.3rem; letter-spacing: -2px; font-weight: 300; cursor: pointer;}
+.moreBtn.pn {}
+
+#pn_txtBox.scroll {opacity: 1;}
+#pn_txtBox.scroll h4 {animation: pn_fromR 1s both;}
+#pn_txtBox.scroll p {animation: pn_fromR 1s .2s both;}
+#pn_txtBox.scroll .moreBtn.pn {animation: pn_fromR 1s .4s both;}
+@keyframes pn_fromR {
+    from {opacity: 0; transform: translateX(50px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+.line_h.pn {top: -20%;}
+
+/**************** 섹션 ni ****************/
+#ni {overflow: hidden; position: relative; padding-top: 250px; height: 1500px; background: linear-gradient(to bottom, #fff, #fff 85%, #bdced5 85%, #bdced5) fixed;}
+
+.decoBg.ni {}
+
+.line_v.ni.v1 {left: 15%; background: rgba(255,255,255,.6);}
+.line_v.ni.v2 {height: 60%;}
+
+.container.ni {z-index: 31;}
+.titBox.ni {margin-bottom: 150px; width: 100%;}
+.titBox.ni.scroll {animation: ni_toTop 1s both;}
+
+@keyframes ni_toTop{
+    from {opacity: 0; padding-top: 150px; margin-bottom: 200px;}
+    to {opacity: 1; padding-top: 0; margin-bottom: 150px;}
+}
+/**************** 섹션 ni : 슬라이드 ****************/
+#ni_slideContainer {position: relative;}
+/* 슬라이드 데코 배경 */
+#ni_bgBox {position: absolute; top: 0; right: -3%; width: 100%; max-width: 500px;}
+#ni_bgImg1 {position: absolute; top: 100px; left: -35%; width: 95%}
+#ni_bgImg1 img {display: block; width: 100%;}
+#ni_bgImg2 {position: absolute; top: -50px; right: 0%;}
+#ni_bgImg2 img {display: block; width: 100%;}
+/* 슬라이드 닷버튼 */
+#ni_dotBtnBox {z-index: 2; position: absolute; top: 20%; right: 10%; transform: translateY(-50%);}
+.ni_dot {opacity: .4; display: block; margin: 30px 0; width: 15px; height: 5px; background: #3e93af; border: none; transition: .3s;}
+.ni_dot.active {opacity: 1;}
+
+/********** 슬라이드 박스 **********/
+.ni_slideBox {overflow: hidden; display: flex;}
+/* 슬라이드 이미지 박스 */
+.ni_slideImgBox {position: relative; margin-left: 55%; width: 100%; max-width: 500px; box-shadow: 0 0 30px rgba(0,0,0,.2);}
+.ni_slideImgBg {display: none; z-index: 1; position: absolute; width: 100%; height: 100%; background: rgba(255,255,255,.7);}
+.ni_slideImg {display: none; opacity: 0; width: 100%;}
+/* 슬라이드 텍스트 박스 */
+.txtBox.ni {display: none; position: absolute; top: 10%; left: 0; padding-right: 50px;}
+.txtBox.ni h4 {line-height: 100%;}
+.txtBox.ni h4::after {}
+.txtBox.ni h4::before {z-index: 1; content: ''; position: absolute; bottom: 0; left: 0; width: 33.3333%; height: 10px; background: #bdced5;}
+.txtBox.ni.slide1 h4::before {left: 0%;}
+.txtBox.ni.slide2 h4::before {left: 33.3333%;}
+.txtBox.ni.slide3 h4::before {left: 66.6666%;}
+
+.txtBox.ni h4 span:nth-child(1) {margin-left: 5px; font-size: .9rem; font-weight: 400;}
+.txtBox.ni h4 span:nth-child(4) {margin-left: 5px; font-size: 1.5rem; color: #3b6978;}
+.txtBox.ni h4::after {background: #f3f3f3;}
+.txtBox.ni p {}
+
+/* 애니메이션 */
+.txtBox.ni h4 {animation: ni_txt .8s both;}
+.txtBox.ni h4 span:nth-child(4) {animation: ni_txt2 1.5s .2s both;}
+.txtBox.ni h4::after {}
+.txtBox.ni p:nth-child(1) {animation: ni_txt .8s .5s both;}
+.txtBox.ni p:nth-child(2) {animation: ni_txt .8s .5s both;}
+.txtBox.ni p:nth-child(3) {animation: ni_txt .8s .6s both;}
+.moreBtn.ni {animation: ni_txt .8s .8s both;}
+
+@keyframes ni_txt {
+    from {transform: translateX(-20%); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+}
+@keyframes ni_txt2 {
+    from {transform: translateX(-20%); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+}
+
+
+/**************** 섹션 lvc ****************/
+#lvc {overflow: hidden; position: relative; height: 1500px; background: url(../images/lvc_bg.jpg) center; background-size: cover;}
+.line_v.lvc {left: 15%; background: rgba(255,255,255,.6);}
+.line_h.lvc {top: 5%; background: rgba(255,255,255,.6);}
+.decoBg.lvc {}
+
+.container.lvc {z-index: 1; height: 100%;}
+
+#lvc_imgBox {position: absolute; top: 50%; left: 30%; transform: translate(-50%,-50%) scale(.8); width: 35%; height: 50%;}
+.lvc_imgBg {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) scale(1); width: 100%;}
+.lvc_tit {position: absolute; top: 45%; left: 50%; transform: translate(-50%,-50%) scale(.7); width: 300%; line-height: 130%; color: #fff; font-size: 9rem; text-align: center; font-family: 'Homemade Apple', cursive;}
+.lvc_img {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) scale(1); width: 100%;}
+.lvc_logo {position: absolute; top: 30%; color: #a8112e; left: 50%; transform: translate(-50%,-50%); font-size: 3rem; font-family: 'Homemade Apple', cursive;}
+
+.txtBox.lvc {position: absolute; top: 50%; left: 77%; transform: translate(-50%,-50%);}
+.txtBox.lvc h4 {}
+.txtBox.lvc h4::after {background: #B3C1C7;}
+.txtBox.lvc p {}
+
+.moreBtn.lvc {position: absolute; top: 100%; right: 0; border: 1px solid #8d8d8d; color: #707070;}
+
+
+/* 스크롤 애니메이션 */
+#lvc_imgBox.scroll .lvc_imgBg {animation: scale1 3s both;}
+#lvc_imgBox.scroll .lvc_tit {animation: scale2 1.8s .3s both;}
+#lvc_imgBox.scroll .lvc_img {animation: lvc_img 1.8s .6s both;}
+#lvc_imgBox.scroll .lvc_logo {animation: lvc_logo 1.8s 1s both;}
+#lvc_imgBox.scroll {animation: lvc_imgBox 1s 1.3s both;}
+.txtBox.lvc.scroll h4 {animation: lvc_txt 1s 1.6s both;}
+.txtBox.lvc.scroll p:nth-child(2) {animation: lvc_txt 1s 1.9s both;}
+.txtBox.lvc.scroll p:nth-child(3) {animation: lvc_txt 1s 2.2s both;}
+.txtBox.lvc.scroll .moreBtn.lvc {animation: lvc_txt 1s 2.5s both;}
+
+@keyframes scale1 {
+    from {transform: translate(-50%,-50%) scale(2); opacity: 0;}
+    to {transform: translate(-50%,-50%) scale(1); opacity: 1;}
+}
+@keyframes scale2 {
+    from {transform: translate(-50%,-50%) scale(2); opacity: 0;}
+    to {transform: translate(-50%,-50%) scale(.7); opacity: 1;}
+}
+@keyframes lvc_img {
+    from {opacity: 0; transform: translate(-50%,-50%) scale(.7);}
+    to {opacity: 1; transform: translate(-50%,-50%) scale(1);}
+}
+@keyframes lvc_logo {
+    from {top: 25%; opacity: 0;}
+    to {top: 30%; color: #a8112e; opacity: 1;}
+}
+@keyframes lvc_imgBox {
+    from {left: 50%; transform: translate(-50%,-50%) scale(.8);}
+    to {left: 25%; transform: translate(-50%,-50%) scale(1);}
+}
+@keyframes lvc_txt {
+    from {transform: translateX(20%); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+}
+
+
+/**************** 섹션 lil ****************/
+#lil {overflow: hidden; position: relative; height: 1240px; background-image: linear-gradient(-225deg, #FF057C 68%, #8D0DEF 110%);}
+#lil::before {content: ''; position: absolute; top: -5px; left: -5px; width: 80%; height: 95%; border: .8px solid rgba(255,255,255,.6);}
+#lil::after {content: attr(data-text); position: absolute; bottom: 6%; right: 21%; color: rgba(255,255,255,.8); font-weight: 100; font-size: .9rem;}
+/**************** 섹션 lil : 배경 동영상 (PC,) ****************/
+#lil_videoBox {position: relative; width: 100%; height: 100%;}
+#lil_video {z-index: -1; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 1280px; height: 720px; border: none;}
+/* 섹션 lil : 배경 동영상 (모바일 : max-width: 500px) */
+#lil_video_m {display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+/**************** 섹션 lil : 텍스트박스 ****************/
+.container.lil {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); height: 100%;}
+
+#lil_txtBox1 {position: absolute; top: 290px; left: 35px; color: #fff;}
+#lil_txtBox1 h4 {font-size: 4.5rem; font-weight: 400; letter-spacing: -4px; font-family: 'Nothing You Could Do', cursive;}
+#lil_txtBox1 p {width: 31%; font-size: 1.2rem; letter-spacing: -1.5px;}
+#lil_txtBox1 p:nth-child(2) {font-weight: 300;}
+#lil_txtBox1 p:nth-child(3) {margin-top: 15px; font-weight: 400;}
+.moreBtn.lil {border: 1px solid #fff; color: #fff;}
+
+#lil_txtBox1.scroll {animation: toCenter1 2s both;}
+@keyframes toCenter1{
+    from {opacity: 0; margin-left: -50px;}
+    to {opacity: 1; margin-left: 0;}
+}
+
+#lil_txtBox2 {position: absolute; bottom: 300px; right: 20px; width: 100%; color: #fff; text-align: right;}
+#lil_txtImg {margin-left: auto; width: 40%; max-width: 250px; min-width: 180px;}
+#lil_txtImg img {display: block; width: 100%;}
+#lil_txtBox2 p {margin-top: 5px; margin-right: 36px; font-size: 1.5rem; font-family: 'Nothing You Could Do', cursive;}
+
+#lil_txtBox2.scroll {animation: toCenter2 2s .5s both;}
+@keyframes toCenter2{
+    from {opacity: 0; margin-right: -50px;}
+    to {opacity: 1; margin-right: 0;}
+}
+
+
+/************************** 섹션 tip & insta **************************/
+#instaTipBg {overflow: hidden; position: relative;}
+/**************** 섹션 insta ****************/
+#insta {position: relative; padding-top: 370px; padding-bottom: 250px;}
+.line_v.insta {left: 15%;}
+.line_h.insta {top: 5%;}
+.line_h.insta.h2 {top: 60%;}
+
+.insta_deco {position: absolute;}
+.insta_deco img {width: 100%;}
+.insta_deco.deco1 {top: 35%; left: 90%; width: 11px;}
+.insta_deco.deco2 {top: 65%; left: 20%; width: 12px;}
+.insta_deco.deco3 {top: 90%; left: 10%; width: 15px;}
+.insta_deco.deco4 {top: 10%; left: 85%; width: 15px;}
+
+.container.insta {display: flex; flex-wrap: wrap; justify-content: center;}
+.titBox.insta {z-index: 2; width: 100%; margin-bottom: 150px;}
+
+#insta_iBox {width: 100%; max-width: 650px; box-shadow: 0 0 100px rgba(0,0,0,.05);}
+#insta_iBox iframe {width: 100%; height: 100%; border: none;}
+
+/* 스크롤 애니메이션 */
+.titBox.insta.scroll {animation: insta_toTop 1s both;}
+@keyframes insta_toTop{
+    from {opacity: 0; padding-top: 150px; margin-bottom: 200px;}
+    to {opacity: 1; padding-top: 0; margin-bottom: 150px;}
+}
+
+/**************** 섹션 tip ****************/
+#tip {position: relative; background: url(../images/tip_ema.jpg) center; background-size: cover; }
+.line_v.tip {background: rgba(255,255,255,.6);}
+.line_h.tip {top: 92%; background: rgba(255,255,255,.6);}
+
+#tip_dark {position: absolute; width: 100%; height: 100%; background: rgb(59 44 15 / 30%);}
+.container.tip {z-index: 3; display: flex; flex-wrap: wrap; justify-content: center; padding-top: 250px; padding-bottom: 300px;}
+.titBox.tip {margin: 0 auto; width: 100%; margin-bottom: 150px; color: #fff;}
+.titBox.tip.scroll {animation: tip_toTop 1.5s both;}
+@keyframes tip_toTop{
+    from {opacity: 0; padding-top: 150px; margin-bottom: 200px;}
+    to {opacity: 1; padding-top: 0; margin-bottom: 150px;}
+}
+/**************** 섹션 tip : 내용박스 ****************/
+.tip_box {z-index: 3; position: relative; margin: 0 3%; width: 45%; max-width: 400px; height: 350px; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,.3);}
+.tip_box::after {content: ''; position: absolute; top: -25px; right: 10%; width: 11px; height: 60px; background: url(../images/hd_deco_1.png) center; background-size: cover;}
+.tip_txt {position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); width: 80%;}
+.tip_txt h3 {margin-bottom: 5px; font-size: 1.5rem; font-weight: 500;}
+.tip_txt p {}
+.tip_form {margin-top: 30px;}
+.tip_inputTxt {padding: 0 20px; width: calc(100% - 60px); height: 40px; border: none; background: #eee;}
+.tip_inputBtn {width: 50px; height: 40px; border: none; background: url(../images/form_arrow_right.png) #eee center; cursor: pointer;}
+
+/* -webkit-mask: radial-gradient(circle, transparent 5%, #fff 5%) 0 -120px;  */
+
+/**************** 섹션 lh ****************/
+#lh {overflow: hidden; display: flex; flex-wrap: wrap; justify-content: center; position: relative; width: 100%; height: 2500px; text-align: center; color: #fff;}
+#lh_bg {width: 100%; height: 100%; background: url(../images/lh_bg.jpeg) center fixed; background-size: cover;}
+#lh_blur {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent, rgba(0,0,0,.9) 80%); transition: 1s;}
+.container.lh {z-index: 10; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+
+#lh_logo {padding-top: 500px;}
+#lh_logo img {width: 200px;}
+#lh_logo h3 {font-size: 3rem; font-family: 'Nothing You Could Do', cursive;}
+
+#lh_logo.scroll {animation: lh_toTop 2s both;}
+@keyframes lh_toTop{
+    from {opacity: 0; padding-top: 1000px;}
+    to {opacity: 1; padding-top: 500px;}
+}
+/**************** 섹션 lh : 텍스트박스 ****************/
+.txtBox.lh {position: relative; padding-top: 1100px; text-align: left;}
+.txtBox.lh h4 {color: #aaa;}
+.txtBox.lh h4 span {font-size: 3.5rem; color: #fff;}
+.txtBox.lh h4::after {background: #fff;}
+.txtBox.lh p {color: #ddd;}
+
+.moreBtn.lh {border: 1px solid #fff; color: #fff;}
+
+.txtBox.lh.scroll {animation: lh2_toTop 2s both;}
+@keyframes lh2_toTop{
+    from {opacity: 0; padding-top: 1100px;}
+    to {opacity: 1; padding-top: 600px;}
+}
+
+/**************** 섹션 map ****************/
+#map {padding: 200px 0; background: #222; color: #fff; text-align: center;}
+.container.map {display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
+.titBox.map {margin-bottom: 0;}
+
+.titBox.map.scroll {animation: map_toTop 1s both;}
+@keyframes map_toTop{
+    from {opacity: 0; padding-top: 150px; padding-bottom: 50px;}
+    to {opacity: 1; padding-top: 0; padding-bottom: 0;}
+}
+
+#map_btn {width: 100%; background: transparent; margin-top: 25px; padding: 15px 35px; border: none; transition: .5s;}
+#map_btn.click {transform: rotate(180deg);}
+#map_btn img {width: 30px; cursor: pointer;}
+#map_foldBox {display: none; padding: 50px 0; width: 100%; height: 600px;}
+#map_iframe {width: 100%; height: 100%; border: none;}
+
+
+/********** FOOTER **********/
+.container.ft.index {border-top: .5px solid #444;}
+
+
+
+
+/************************************************************************************* 1350px (1.5rem) */
+@media screen and (max-width: 1350px){
+
+    /************************* 헤더 *************************/
+    #hd_txtBox {left: 20px;}
+    .quickmenu.hd {right: 20px;}
+    
+    /**************** 섹션 텍스트박스 (공통) ****************/
+    .txtBox h4 {margin-bottom: 40px; padding-bottom: 50px; font-size: 3rem;}
+    .txtBox p {font-size: 1.5rem; text-indent: 20px; margin-top: 20px; margin-bottom: 20px;}
+    .moreBtn {margin-top: 30px; width: 170px; height: 50px;}
+
+    /**************** 섹션 bi ****************/
+    .container.bi {padding-left: 0; padding-right: 0;}
+    
+    /**************** 섹션 pn ****************/
+    #pn_icon {margin-left: 15px;}
+    #pn_txtBox {margin-right: 20px;}
+    
+    /**************** 섹션 ni ****************/
+    #ni {background: linear-gradient(to bottom, #fff, #fff 60%, #bdced5 60%, #bdced5);}
+    #ni_bgBox {left: 50%; transform: translateX(-50%);}
+    #ni_bgImg1 {top: 150px; left: -25%; width: 95%;}
+    #ni_bgImg2 {right: -20%; width: 95%;}
+    #ni_dotBtnBox {right: -10%;}
+    
+    .ni_slideImgBox {margin: 0 auto;}
+    .ni_slideImgBg {display: block;}
+    
+    .txtBox.ni {z-index: 1; top: 90%; left: 50%; transform: translate(-50%,-100%); width: 100%; max-width: 450px; padding: 0 15px;}
+    @keyframes ni_toTop{
+        from {opacity: 0; padding-top: 150px; margin-bottom: 200px;}
+        to {opacity: 1; padding-top: 0; margin-bottom: 150px;}
+    }
+    .txtBox.ni h4::after {height: 8px; background: #fff;}
+    .txtBox.ni h4 span:nth-child(4) {font-size: 1.3rem;}
+    .moreBtn.ni {border: 1px solid #888; color: #555;}
+    
+    /**************** 섹션 lvc ****************/
+    #lvc {}
+    #lvc_imgBox {top: 25%; left: 50%; width: 70%; max-width: 500px; min-width: 300px;}
+    .txtBox.lvc {top: 65%; left: 50%; width: 100%; max-width: 400px;}
+    .txtBox.lvc h4::after {background: #555;}
+    .moreBtn.lvc {}
+
+    @keyframes lvc_imgBox {
+        from {transform: translate(-50%,-50%) scale(.8);}
+        to {transform: translate(-50%,-50%) scale(1);}
+    }
+    
+    /**************** 섹션 lil ****************/
+    #lil::after {right: 21.5%; font-size: .8rem;}
+    #lil_txtBox1 {left: 20px;}
+    #lil_txtBox2 {right: 20px;}
+    
+    /**************** 섹션 tip ****************/
+    .container.tip {justify-content: center;}
+    .tip_box:nth-child(2) {margin-bottom: 100px;}
+    
+    /**************** 섹션 lh ****************/
+    .txtBox.lh h4 span {font-size: 3rem;}
+}
+
+
+/* 모바일 */
+/************************************************************************************* 1050px */
+@media screen and (max-width: 1050px){
+    
+    /************************* 헤더 *************************/
+    .hd_txt {right: 6%;}
+    .hd_tit {top: 58vh; font-size: 6rem;}
+    
+    #hd_logo {top: 30px; width: 80px;}
+    #hd_nav {display: none;}
+    .hd_mainLi {width: 30px;}
+    .hd_mainLi span {}
+    .searchBox.hd {display: none;}
+    .quickmenu.hd {display: none;}
+    #hd_dotBox {display: flex;}
+    
+    /**************** 섹션 bi ****************/
+    #bi {padding: 150px 0 0 0;}
+    .container.bi {position: relative; padding-left: 0; padding-right: 0;}
+    .bi_slideCapBox {opacity: 1; background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,.3));}
+    .bi_slideCap {width: 70%; left: 15%;}
+    .bi_slideCap h5 {margin-bottom: 10px; line-height: 110%; font-size: 2.2rem; color: #fff;}
+    .bi_slideCap .price {font-size: 1.3rem;}
+    /* swiper slider */
+    .swiper-button-prev, .swiper-button-next {display: none;}
+    
+    /**************** 섹션 pn ****************/
+    #pn {margin-top: -200px; height: 1000px;}
+    #pn_bg {background-attachment: local;}
+    .container.pn {justify-content: flex-start; align-items: flex-end;}
+    #pn_icon {position: absolute; bottom: 370px; margin-left: 22px; width: 50px;}
+    #pn_txtBox {margin-left: 20px; margin-right: 0; padding-bottom: 180px; text-align: left;}
+    
+    /**************** 섹션 ni ****************/
+    .titBox.ni {margin-bottom: 150px;}
+    @keyframes ni_toTop{
+        from {opacity: 0; padding-top: 150px; margin-bottom: 200px;}
+        to {opacity: 1; padding-top: 0; margin-bottom: 150px;}
+    }
+    
+    /**************** 섹션 lvc ****************/
+    #lvc {height: 1400px;}
+    #lvc_imgBox {top: 30%;}
+    .txtBox.lvc {top: 70%;}
+    
+    /**************** 섹션 lil ****************/
+    #lil_video {display: none;}
+    #lil_video_m {display: block;}
+    
+    /**************** 섹션 insta ****************/
+    #insta {padding-bottom: 250px;}
+    .titBox.insta {margin-bottom: 100px;}
+    @keyframes insta_toTop{
+        from {opacity: 0; padding-top: 150px; padding-bottom: 150px;}
+        to {opacity: 1; padding-top: 0; margin-bottom: 100px;}
+    }
+    
+    /**************** 섹션 tip ****************/
+    #tip {}
+    .container.tip {z-index: 3; display: flex; flex-wrap: wrap; justify-content: center; padding-top: 200px; padding-bottom: 250px;}
+    
+    .titBox.tip {margin-bottom: 130px;}
+    @keyframes tip_toTop{
+        from {opacity: 0; padding-top: 150px; margin-bottom: 180px;}
+        to {opacity: 1; padding-top: 0; margin-bottom: 130px;}
+    }
+    
+    /**************** 섹션 lh ****************/
+    #lh {height: 1800px;}
+    #lh_bg {background: url(../images/lh_bg_m.jpeg) center; background-size: cover;}
+    #lh_logo img {width: 140px;}
+    #lh_logo h3 {font-size: 2.1rem;}
+
+    .txtBox.lh {position: relative; padding-top: 300px; text-align: left; width: 100%; max-width: 400px;}
+    .txtBox.lh h4 {color: #aaa;}
+
+    @keyframes lh2_toTop{
+        from {opacity: 0; padding-top: 1100px;}
+        to {opacity: 1; padding-top: 300px;}
+    }
+}
+
+
+/************************************************************************************* 850px */
+@media screen and (max-width: 850px){
+    
+    /************************* 헤더 *************************/
+    .hd_txt {width: 50px;}
+    .hd_tit {top: 60vh; font-size: 5rem;}
+    
+    /**************** 섹션 bi ****************/
+    .bi_slideCap h5 {font-size: 3rem;}
+    .bi_slideCap .price {font-size: 1.6rem;}
+
+    /**************** 섹션 lvc ****************/
+    #lvc {}
+    .lvc_tit {width: 100%; line-height: 180%;}
+    .txtBox.lvc {padding: 0 20px;}
+    .moreBtn.lvc {right: 20px;}
+
+    /**************** 섹션 lil ****************/
+    #lil::after {right: 22.5%;}
+    #lil_txtBox1 h4 {font-size: 3.5rem;}
+    #lil_txtBox1 p {font-size: 1.1rem;}
+    
+    /**************** 섹션 tip ****************/
+    .tip_box {min-width: 350px;}
+
+    /**************** 섹션 lh ****************/
+    .txtBox.lh h4 span {font-size: 3rem;}
+}
+
+/************************************************************************************* 650px (1.4rem) */
+@media screen and (max-width: 650px){
+    
+    /**************** 섹션 텍스트박스 (공통) ****************/
+    .txtBox h4 {margin-bottom: 30px; padding-bottom: 40px; line-height: 120%; font-size: 2.5rem;}
+    .txtBox p {font-size: 1.4rem; margin-top: 15px; margin-bottom: 15px;}
+    
+    /**************** 섹션 ni ****************/
+    #ni {height: 1500px;}
+    #ni_bgImg1 {top: 150px; left: -10%;}
+    #ni_bgImg2 {top: px; right: -10%;}
+    #ni_dotBtnBox {top: 88%; left: 50%; transform: translate(-50%,-50%) rotate(-90deg);}
+    .moreBtn.ni {width: 155px; height: 45px;}
+    
+    /**************** 섹션 lvc ****************/
+    #lvc {height: 1300px;}
+    .lvc_tit {left: 45%;}
+    
+    /**************** 섹션 lh ****************/
+    .txtBox.lh h4 span {font-size: 2.5rem;}
+}
+
+
+/************************************************************************************* 600px */
+@media screen and (max-width: 600px){
+    
+    /************************* 헤더 *************************/
+    .hd_txt {}
+    .hd_tit {font-size: 4.5rem;}
+    /*********** 헤더 이동버튼 (모바일) ***********/
+    .hd_moveBtn {max-width: 200px; font-size: 1.15rem;}
+
+    /**************** 아래로 버튼 ****************/
+    #toBottom {top: 77vh;}
+    #toBottom img {width: 35px;}
+    
+    /*********** 섹션 타이틀 (공통) ***********/
+    .titBox {margin: 0 auto; width: 80%;}
+    .titBox h3 {font-size: 1.7rem; letter-spacing: 7px;}
+    .titBox p {margin-top: 5px; margin-left: 0; width: 100%; font-size: .9rem; text-align: center;}
+    .moreBtn {width: 150px; height: 45px; font-size: 1rem;}
+    
+    /**************** 섹션 bi ****************/
+    #bi {padding: 130px 0 0 0;}
+    /*********** 섹션 bi : 슬라이드 캡션 ***********/
+    .bi_slideCap {width: 70%;}
+    .bi_slideCap h5 {font-size: 2.4rem;}
+    .bi_slideCap .price {font-size: 1.3rem;}
+    
+    /**************** 섹션 pn ****************/
+    #pn {height: 900px;}
+    #pn_icon {bottom: 330px; width: 50px;}
+    #pn_txtBox {padding-bottom: 110px;}
+    #pn_txtBox h4 {font-size: 1.7rem; -webkit-text-stroke: .9px #fff;}
+    #pn_txtBox h4 span {display: block; margin: -11px 0;}
+    #pn_txtBox p {margin-top: 25px; font-size: 1.2rem;}
+    
+    /**************** 섹션 ni ****************/
+    #ni {padding-top: 200px; height: 1350px;}
+
+    /**************** 섹션 lvc ****************/
+    #lvc {height: 1100px;}
+    #lvc_imgBox {}
+    .lvc_tit {left: 45%;}
+    .txtBox.lvc {}
+    
+    /**************** 섹션 lil ****************/
+    #lil {height: 1040px;}
+    #lil_txtBox1 {top: 200px;}
+    #lil_txtBox1 p {width: 45%; font-size: 1rem;}
+    #lil_txtBox1 h4 {font-size: 3rem;}
+    #lil_txtBox2 {bottom: 200px;}
+    .moreBtn.lil {}
+    
+    /**************** 섹션 insta ****************/
+    #insta {padding-top: 200px; padding-bottom: 200px;}
+    #tipInstaBg::before {top: 4%; left: 100%; width: 2500px; height: 2500px;}
+    #tipInstaBg::after {top: 4%; left: -80%; width: 2500px; height: 2500px;}
+    
+    /**************** 섹션 tip ****************/
+    #tip {}
+    .container.tip {padding-top: 150px; padding-bottom: 200px;}
+    .tip_box {min-width: 330px; height: 300px;}
+    
+    /**************** 섹션 lh ****************/
+    #lh {height: 1200px;}
+    #lh_bg {background: url(../images/lh_bg_m.jpeg) center; background-size: cover;}
+    
+    #lh_logo {padding-top: 300px;}
+    #lh_logo img {width: 120px;}
+    #lh_logo h3 {font-size: 1.8rem;}
+    @keyframes lh_toTop{
+        from {opacity: 0; padding-top: 1000px;}
+        to {opacity: 1; padding-top: 300px;}
+    }
+
+    .txtBox.lh {padding-top: 200px;}
+    @keyframes lh2_toTop{
+        from {opacity: 0; padding-top: 1100px;}
+        to {opacity: 1; padding-top: 200px;}
+    }
+    
+    /**************** 섹션 map ****************/
+    #map {padding: 150px 0}
+    .container.map {padding: 0;}
+}
+
+/************************************************************************************* 500px */
+@media screen and (max-width: 500px){
+    
+    /************************* 헤더 *************************/
+    .hd_txt {right: 8%;}
+    
+    /**************** 섹션 lvc ****************/ 
+    .lvc_tit {left: 35%;}
+    .txtBox.lvc h4 {width: 100%; margin-left: 0;}
+    
+    /**************** 섹션 lil ****************/
+    #lil::after {right: 23%; font-size: .75rem;}
+}
+
+
+/************************************************************************************* 450px */
+@media screen and (max-width: 450px){
+    
+    /*********** 헤더 이동버튼 (모바일) ***********/
+    .hd_moveBtn {max-width: 165px; font-size: 1rem;}
+    
+    /**************** 섹션 pn ****************/
+    #pn {height: 800px;}
+    
+    .txtBox.ni {top: 50%; transform: translate(-50%,-50%);}
+    
+    /**************** 섹션 lvc ****************/
+    .lvc_tit {font-size: 7rem;}
+    
+    /**************** 섹션 lil ****************/
+    #lil_txtBox2 {display: none;}
+    .moreBtn.lil {position: absolute; top: 550px; right: 20px;}
+}
+
+
+/************************************************************************************* 400px (1.2rem) */
+@media screen and (max-width: 400px){
+    
+    /************************* 헤더 *************************/
+    .hd_txt {width: 45px; font-size: .7rem;}
+    .hd_tit {font-size: 3.8rem;}
+    
+    /*********** 섹션 타이틀 (공통) ***********/
+    .titBox h3 {font-size: 1.4rem; letter-spacing: 5px;}
+    .titBox p {font-size: .8rem;}
+    
+    /**************** 섹션 텍스트박스 (공통) ****************/
+    .txtBox h4 {font-size: 2.3rem;}
+    .txtBox p {font-size: 1.2rem;}
+    
+    /**************** 섹션 bi ****************/
+    .tag {font-size: .6rem;}
+    #bi {padding: 90px 0 0 0;}
+    .titBox.bi {margin-bottom: 50px;}
+    @keyframes bi_toTop{
+        from {opacity: 0; padding-top: 150px; margin-bottom: 100px;}
+        to {opacity: 1; padding-top: 0; margin-bottom: 50px;}
+    }
+    .bi_slideCap h5 {margin-bottom: 5px; font-size: 1.6rem;}
+    .bi_slideCap .price {font-size: 1rem;}
+    
+    /**************** 섹션 pn ****************/
+    #pn_icon {bottom: 350px; width: 40px;}
+    #pn_txtBox {padding-bottom: 120px;}
+    #pn_txtBox h4 {font-size: 1.6rem; letter-spacing: 4px;}
+    #pn_txtBox p {margin-top: 15px; font-size: 1rem;}
+    
+    /**************** 섹션 ni ****************/
+    #ni {padding-top: 120px; height: 1000px;}
+    #ni_bgImg1 {top: 100px;}
+    
+    /**************** 섹션 lvc ****************/
+    #lvc {height: 900px;}
+    #lvc_imgBox {top: 25%;}
+    .txtBox.lvc {top: 65%;}
+        
+    /**************** 섹션 lil ****************/
+    #lil::after {right: 24%;}
+    #lil_txtBox1 h4 {font-size: 2.8rem;}
+    #lil_txtBox1 p {font-size: .9rem;}
+    
+    /**************** insta&tip ****************/
+    #tipInstaBg::before {top: 4%; left: 130%; width: 2000px; height: 2000px;}
+    #tipInstaBg::after {top: 4%; left: -170%; width: 2000px; height: 2000px;}
+    
+    /**************** 섹션 insta ****************/
+    #insta {padding-top: 120px; padding-bottom: 120px;}
+    .titBox.insta {margin-bottom: 70px;}
+    @keyframes insta_toTop{
+        from {opacity: 0; padding-top: 150px; padding-bottom: 100px;}
+        to {opacity: 1; padding-top: 0; margin-bottom: 50px;}
+    }
+    
+    /**************** 섹션 tip ****************/
+    #tip {}
+    .container.tip {padding-top: 100px; padding-bottom: 150px;}
+    .tip_box {min-width: 270px; height: 270px;}
+    
+    /**************** 섹션 lh ****************/
+    .txtBox.lh h4 span {font-size: 2.3rem;}
+    #lh_logo img {width: 110px;}
+    #lh_logo h3 {font-size: 1.6rem;}
+    
+    /**************** 섹션 map ****************/
+    #map_foldBox {padding: 0; height: 400px;}
+}
+
+/************************************************************************************* 380px (1.1rem) */
+@media screen and (max-width: 380px){
+    
+    /**************** 섹션 텍스트박스 (공통) ****************/
+    .txtBox h4 {font-size: 2.1rem;}
+    .txtBox p {font-size: 1.1rem;}
+    
+    /**************** 섹션 lh ****************/
+    .txtBox.lh h4 span {font-size: 2.1rem;}
+}

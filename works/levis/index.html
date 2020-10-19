@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Seohyun Jeong">
+<meta name="format-detection" content="telephone=no" />
+<title> Levi's </title>
+
+<!-- Favicon -->
+<link href="images/favicon.ico" rel="shortcut icon" />
+
+<!-- CSS -->
+<!-- swiper slider -->
+<link href="js/plugIn/swiper/swiper-bundle.css" rel="stylesheet" />
+<!-- 공통 -->
+<link href="css/reset.css" rel="stylesheet" />
+<link href="css/gnb.css" rel="stylesheet" />
+<link href="css/footer.css" rel="stylesheet" />
+<!-- MAIN PAGE -->
+<link href="css/index.css" rel="stylesheet" />
+
+<!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- easeScroll -->
+<script src="js/plugIn/jquery.easeScroll.js"></script>
+<!-- 공통 -->
+<script src="js/gnb.js"></script>
+<!-- MAIN PAGE -->
+<script src="js/index.js"></script>
+
+</head>
+
+<body>
+
+<!-- preloader -->
+<div id="spinnerBox">
+    <img class="spinner" src="images/logo_w.png" alt="로딩용 로고" />
+</div>
+
+<!-- GNB -->
+<!-- 탑박스 -->
+<div id="top_container" class="pd">
+    <!-- 탑박스1 -->
+    <div id="top_box1">
+        <!-- 탑 퀵메뉴 -->
+        <div class="quickmenu top">
+            <ul>
+                <li class="move" moveHref="register.html">회원가입</li>
+                <li class="move" moveHref="login.html"></li>
+                <li class="toMapBtn"></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 탑박스2 -->
+    <div id="top_box2">
+        <!-- 탑 로고 -->
+        <div id="top_logo"><img src="images/logo.png" alt="로고" /></div>
+        <!-- 탑 네비 -->
+        <nav id="top_Nav">
+            <ul class="top_mainUl">
+                <li class="top_mainLi">
+                    <span>NEW</span>
+                </li>
+                <li class="top_mainLi">
+                    <span>WOMEN</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">ALL</li>
+                        <li class="top_subLi">JEANS</li>
+                        <li class="top_subLi">TOP</li>
+                        <li class="top_subLi">BOTTOM</li>
+                        <li class="top_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="top_mainLi">
+                    <span>MEN</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">ALL</li>
+                        <li class="top_subLi">JEANS</li>
+                        <li class="top_subLi">TOP</li>
+                        <li class="top_subLi">BOTTOM</li>
+                        <li class="top_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="top_mainLi">
+                    <span>501&reg;</span>
+                </li>
+                <li class="top_mainLi">
+                    <span>L'STORY</span>
+                    <ul class="top_subUl">
+                        <li class="top_subLi">Levi's Vintage Clothing</li>
+                        <li class="top_subLi">Live In Levi's</li>
+                        <li class="top_subLi">501&reg; History</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- 탑 검색창 -->
+        <form class="searchBox top">
+            <div class="searchIcon top"></div>
+            <input class="searchBar top" type="text" name="search" />
+        </form>
+        <!-- 탑 네비모달 열기 버튼 (모바일) -->
+        <button class="nmOpenBtn top">
+            <span class="nmOpen top"></span>
+            <span class="nmOpen top"></span>
+        </button>
+    </div>
+</div>
+<!-- 네비모달 (모바일) -->
+<div id="navModal">
+    <div id="navModalBox">
+        <!-- 네비모달 닫기 버튼 -->
+        <button id="nmClose">
+            <span class="nmClose"></span>
+            <span class="nmClose"></span>
+        </button>
+       <!-- 네비모달 퀵메뉴 -->
+        <div class="quickmenu nm">
+            <ul>
+                <li class="move" moveHref="register.html">회원가입</li>
+                <li class="move" moveHref="login.html"></li>
+                <li class="toMapBtn"></li>
+            </ul>
+        </div>
+        <!-- 네비모달 네비 -->
+        <nav id="nm_Nav">
+            <ul class="nm_mainUl">
+                <li class="nm_mainLi">
+                    <span>NEW</span>
+                </li>
+                <li class="nm_mainLi">
+                    <span>WOMEN</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">ALL</li>
+                        <li class="nm_subLi">JEANS</li>
+                        <li class="nm_subLi">TOP</li>
+                        <li class="nm_subLi">BOTTOM</li>
+                        <li class="nm_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="nm_mainLi">
+                    <span>MEN</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">ALL</li>
+                        <li class="nm_subLi">JEANS</li>
+                        <li class="nm_subLi">TOP</li>
+                        <li class="nm_subLi">BOTTOM</li>
+                        <li class="nm_subLi">ACC</li>
+                    </ul>
+                </li>
+                <li class="nm_mainLi">
+                    <span>501&reg;</span>
+                </li>
+                <li class="nm_mainLi">
+                    <span>L'STORY</span>
+                    <ul class="nm_subUl">
+                        <li class="nm_subLi">Levi's Vintage Clothing</li>
+                        <li class="nm_subLi">Live In Levi's</li>
+                        <li class="nm_subLi" >501&reg; History</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- 네비모달 검색창 -->
+        <form class="searchBox nm">
+            <div class="searchIcon nm"></div>
+            <input class="searchBar nm" type="text" name="search" />
+        </form>
+    </div>
+</div>
+
+
+<!-- MAIN PAGE -->
+<!-- 메인박스 (헤더 & 아래로 버튼) -->
+<header id="header">
+    <div id="hd_decoBox">
+        <!-- 헤더 타이틀 -->
+        <p class="hd_txt">Which Is Not Something You See Too Often</p>
+        <h1 class="hd_tit">&#35;LIVE<br /> IN<br /> LEVI&#39;S</h1>
+        <!-- (헤더 데코) -->
+        <div class="hd_deco deco1"><img src="images/hd_deco_1.png" alt="장식용 사각형" /></div>
+        <div class="hd_deco deco2"><img src="images/hd_deco_2.png" alt="장식용 사각형" /></div>
+        <div class="hd_deco deco3"><img src="images/hd_deco_3.png" alt="장식용 사각형" /></div>
+    </div>
+    <!-- (배경 데코 라인) -->
+    <span class="line_h hd"></span>
+    <span class="line_v hd"></span>
+    <!-- 헤더 -->
+    <div id="hdBox">
+       <!-- 헤더 배경 -->
+        <div id="hd_bg"></div>
+        <video id="hd_video" loop autoplay muted playsinline >
+            <source src="images/hd_lstory.mp4" type="video/mp4" />
+        </video>
+        <div id="hd_dark"></div>
+        <div class="container hd">
+            <!-- 헤더 로고 -->
+            <div id="hd_logo"><img src="images/logo_w.png" alt="로고(흰색)" /></div>
+            <!-- 헤더 네비 -->
+            <nav id="hd_nav">
+                <ul class="hd_mainUl">
+                    <li class="hd_mainLi">
+                        <span>NEW</span>
+                    </li>
+                    <li class="hd_mainLi">
+                        <span>WOMEN</span>
+                        <ul class="hd_subUl">
+                            <li class="hd_subLi">ALL</li>
+                            <li class="hd_subLi">JEANS</li>
+                            <li class="hd_subLi">TOP</li>
+                            <li class="hd_subLi">BOTTOM</li>
+                            <li class="hd_subLi">ACC</li>
+                        </ul>
+                    </li>
+                    <li class="hd_mainLi">
+                        <span>MEN</span>
+                        <ul class="hd_subUl">
+                            <li class="hd_subLi">ALL</li>
+                            <li class="hd_subLi">JEANS</li>
+                            <li class="hd_subLi">TOP</li>
+                            <li class="hd_subLi">BOTTOM</li>
+                            <li class="hd_subLi">ACC</li>
+                        </ul>
+                    </li>
+                    <li class="hd_mainLi">
+                        <span>501&reg;</span>
+                    </li>
+                    <li class="hd_mainLi">
+                        <span>L&#39;STORY</span>
+                        <ul class="hd_subUl">
+                            <li class="hd_subLi">Levi's Vintage Clothing</li>
+                            <li class="hd_subLi">Live In Levi's</li>
+                            <li class="hd_subLi">501&reg; History</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 헤더 검색창 -->
+            <form class="searchBox hd">
+                <div class="searchIcon hd"></div>
+                <input class="searchBar hd" type="text" name="search" />
+            </form>
+            <!-- 헤더 퀵메뉴 -->
+            <div class="quickmenu hd">
+                <ul>
+                    <li class="move" moveHref="register.html">회원가입</li>
+                    <li class="move" moveHref="login.html"></li>
+                    <li class="toMapBtn"></li>
+                </ul>
+            </div>
+            <!-- 헤더 닷버튼 (모바일) -->
+            <div id="hd_dotBox">
+                <div class="hd_dot active"></div>
+                <div class="hd_dot"></div>
+            </div>
+            <!-- 헤더 이동버튼 (모바일) -->
+            <button class="hd_moveBtn move" moveHref="new.html">신제품 구매하기</button>
+            <!-- 헤더 네비모달 열기 버튼 (모바일) -->
+            <button class="nmOpenBtn hd">
+                <span class="nmOpen hd"></span>
+                <span class="nmOpen hd"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- 섹션 -->
+<!-- 섹션 bi (Best Items) -->
+<section id="bi">
+    <div class="hd_deco deco4"><img src="images/hd_deco_3.png" alt="장식용 사각형" /></div>
+    <div class="container bi">
+        <!-- 타이틀 박스 -->
+        <div class="titBox bi">
+            <h3>BEST ITEMS</h3>
+            <P>지금 가장 사랑받는 제품</P>
+        </div>
+        <!-- 탭버튼 -->
+        <div id="bi_tabBtn">
+            <button class="bi_btn women active">WOMEN</button>
+            <button class="bi_btn men">MEN</button>
+        </div>
+        <!-- 섹션 bi : WOMEN -->
+        <div id="bi_women" class="active">
+            <!-- 슬라이드 박스 -->
+            <div class="bi_slideBoxW swiper-container">
+                <!-- 슬라이드 -->
+                <div class="bi_slideW swiper-wrapper">
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/women/bi_women_1.jpg" alt="여성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag mc">LEVI'S® MADE&amp;CRAFTED</span>
+                            <div class="bi_slideCap">
+                                <h5>오버사이즈 타입3 자켓</h5>
+                                <p class="price">&#8361;209,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/women/bi_women_2.jpg" alt="여성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <div class="bi_slideCap">
+                                <h5>스몰 크로스바디 백</h5>
+                                <p class="price">&#8361;202,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/women/bi_women_3.jpg" alt="여성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag mc">LEVI'S® MADE&amp;CRAFTED</span>
+                            <div class="bi_slideCap">
+                                <h5>대드 셔츠 드레스</h5>
+                                <p class="price">&#8361;167,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/women/bi_women_4.jpg" alt="여성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag pm">LEVI'S® PREMIUM</span>
+                            <div class="bi_slideCap">
+                                <h5>벌룬 레그 코튼 팬츠</h5>
+                                <p class="price">&#8361;98,200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/women/bi_women_5.jpg" alt="여성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag pm">LEVI'S® PREMIUM</span>
+                            <div class="bi_slideCap">
+                                <h5>코튼 트리커 자켓</h5>
+                                <p class="price">&#8361;82,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/women/bi_women_6.jpg" alt="여성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag pm">LEVI'S® PREMIUM</span>
+                            <div class="bi_slideCap">
+                                <h5>벌룬 레그 우먼즈 팬츠</h5>
+                                <p class="price">&#8361;98,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 슬라이드 컨트롤러 -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        
+        <!-- 섹션 bi : MEN -->
+        <div id="bi_men">
+            <!-- 슬라이드 박스 -->
+            <div class="bi_slideBoxM swiper-container">
+               <!-- 슬라이드 -->
+               <div class="bi_slideM swiper-wrapper">
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/men/bi_men_4.jpg" alt="남성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag lvc">LEVI'S® VINTAGE CLOTHING</span>
+                            <div class="bi_slideCap">
+                                <h5>1960's 아노락 자켓</h5>
+                                <p class="price">&#8361;190,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/men/bi_men_2.jpg" alt="남성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag pm">LEVI'S® PREMIUM</span>
+                            <div class="bi_slideCap">
+                                <h5>마리나 윈드브레이커 자켓</h5>
+                                <p class="price">&#8361;108,200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/men/bi_men_3.jpg" alt="남성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag lvc">LEVI'S® VINTAGE CLOTHING</span>
+                            <div class="bi_slideCap">
+                                <h5>오렌지 탭 스포츠 팬츠</h5>
+                                <p class="price">&#8361;167,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/men/bi_men_4.jpg" alt="남성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag lvc">LEVI'S® VINTAGE CLOTHING</span>
+                            <div class="bi_slideCap">
+                                <h5>1960's 아노락 자켓</h5>
+                                <p class="price">&#8361;190,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/men/bi_men_5.jpg" alt="남성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <span class="tag mc">LEVI'S® MADE&amp;CRAFTED</span>
+                            <div class="bi_slideCap">
+                                <h5>릴렉스 치노 팬츠</h5>
+                                <p class="price">&#8361;141,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi_slideImg swiper-slide">
+                        <img src="images/bi/men/bi_men_6.jpg" alt="남성 의류 베스트" />
+                        <div class="bi_slideCapBox">
+                            <div class="bi_slideCap">
+                                <h5>쇼트 컷 삭스</h5>
+                                <p class="price">&#8361;18,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 슬라이드 컨트롤러 -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 섹션 pn (Promotion News) -->
+<section id="pn">
+    <!-- (배경 데코 라인) -->
+    <span class="line_h pn"></span>
+    <div id="pn_bg">
+       <div id="pn_dark">
+           <!-- 섹션 pn : 텍스트박스 -->
+            <div class="container pn">
+                <img id="pn_icon" src="images/pn_icon.png" alt="쿠폰 아이콘" />
+                <div id="pn_txtBox">
+                    <h4>리바이스몰, <span><br /></span> 처음이신가요?</h4>
+                    <p>첫 구매 고객님께 15% 할인 혜택을 드려요</p>
+                    <button class="moreBtn pn">자세히 보기<img src="images/right_w.png" alt="이동 아이콘" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 섹션 ni (New Items) -->
+<section id="ni">
+    <span class="decoBg ni"></span>
+    <!-- (배경 데코 라인) -->
+    <span class="line_v ni v1"></span>
+    <span class="line_v ni v2"></span>
+    <div class="container ni">
+        <!-- 타이틀 박스 -->
+        <div class="titBox ni">
+            <h3>NEW ITEMS</h3>
+            <P>가장 먼저 만나는 신제품</P>
+        </div>
+        <!-- 섹션 ni : 슬라이드 -->
+        <div id="ni_slideContainer">
+            <!-- 슬라이드 데코 배경 -->
+            <div id="ni_bgBox">
+                <div id="ni_bgImg1"><img src="images/ni_bg.jpg" alt="장식용 나뭇잎" /></div>
+                <div id="ni_bgImg2"><img src="images/ni_bg.jpg" alt="장식용 나뭇잎" /></div>
+                <!-- 슬라이드 닷버튼 -->
+                <div id="ni_dotBtnBox">
+                    <button class="ni_dot"></button>
+                    <button class="ni_dot"></button>
+                    <button class="ni_dot"></button>
+                </div>
+            </div>
+            <div class="ni_slideBox move" moveHref="detail_1.html">
+                <div class="ni_slideImgBox">
+                    <div class="ni_slideImgBg"></div>
+                    <img class="ni_slideImg" src="images/ni_2.jpg" alt="신제품" />
+                </div>
+                <div class="txtBox ni slide1">
+                    <h4>
+                        <span>LEVI'S® PREMIUM</span>
+                        <br />드루 윈드 브레이커
+                        <br /><span>&#8361;89,500</span>
+                    </h4>
+                    <p>스포티한 윈드 브레이커는 90년대에 영감을 받아 탄생했습니다. 모던하게 떨어진 어깨와 그물 소재의 안감이 편안함을 줍니다. 더욱 빈티지한 느낌을 위해 리바이스®모노그램 로고가 가슴에 부착되어 있습니다.</p>
+                    <button class="moreBtn ni">자세히 보기<img src="images/right_g.png" alt="이동 아이콘" /></button>
+                </div>
+            </div>
+            <div class="ni_slideBox">
+                <div class="ni_slideImgBox">
+                    <div class="ni_slideImgBg"></div>
+                    <img class="ni_slideImg" src="images/ni_3.jpg" alt="신제품" />
+                </div>
+                <div class="txtBox ni slide2">
+                    <h4>
+                        <span>LEVI'S® MADE&amp;CRAFTED</span>
+                        <br />드로코드 유틸리티 팬츠
+                        <br /><span>&#8361;149,000</span>
+                    </h4>
+                    <p>작업복에서 영감을 받은 유틸리티 팬츠는 대담한 디자인을 담아내고 있습니다. 유기농 스톤워시 데님으로 제작되었으며 허리의 주름과 연마에서부터 뒷면의 보강된 다리 패치와 플랩 포켓에 이르기까지 다양한 독특한 디테일이 특징입니다.</p>
+                    <button class="moreBtn ni">자세히 보기<img src="images/right_g.png" alt="이동 아이콘" /></button>
+                </div>
+            </div>
+            <div class="ni_slideBox">
+                <div class="ni_slideImgBox">
+                    <div class="ni_slideImgBg"></div>
+                    <img class="ni_slideImg" src="images/ni_1.jpg" alt="신제품" />
+                </div>
+                <div class="txtBox ni slide3">
+                    <h4>
+                        <span>LEVI'S® VINTAGE CLOTHING</span>
+                        <br />WHITE DENIM SEASON IS BACK
+                    </h4>
+                    <p>화이트 진의 계절이 돌아왔습니다. 충분히 따뜻한 날 하얀 데님 진, 그리고 그와 어울리는 아이템들을 매치해보세요.</p>
+                    <p>단, 흰 옷을 입었다고 티끌 하나 만들지 않으려 걱정하지 마세요.</p>
+                    <button class="moreBtn ni">자세히 보기<img src="images/right_g.png" alt="이동 아이콘" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    
+
+<!-- 섹션 lvc (levi'story : Levi's Vintage Clothing) -->
+<section id="lvc">
+    <span class="decoBg lvc"></span>
+    <!-- (배경 데코 라인) -->
+    <span class="line_h lvc"></span>
+    <span class="line_v lvc"></span>
+    <div class="container lvc">
+        <!-- 섹션 lvc : 이미지박스 -->
+        <div id="lvc_imgBox">
+            <img class="lvc_imgBg" src="images/lvc_circle.png" alt="장식용 원형" />
+            <h3 class="lvc_tit">Vintage Clothing</h3>
+            <img class="lvc_img" src="images/lvc_man.png" alt="lvc 남성 모델" />
+            <p class="lvc_logo">levi's</p>
+        </div>
+        <!-- 섹션 lvc : 텍스트박스 -->
+        <div class="txtBox lvc">
+            <h4>SOAPBOX DERBY OF &#39;75</h4>
+            <p>Levis Vintage Clothing은 빈티지 무드와 스타일을 사랑하는 사람들 사이에서 주목받는 컬렉션으로 지나온 시대의 패브릭과 디테일, 핏을 재생산합니다.</p>
+            <p>리바이스는 지난 140년동안 각 시대의 열심히 일해온 사람들에게 영감을 받아 시즌 컬렉션을 표현해왔습니다.</p>
+            <button class="moreBtn lvc move" moveHref="Lsoty_lvc.html">자세히 보기<img src="images/right_g.png" alt="이동 아이콘" /></button>
+        </div>
+    </div>
+</section>
+
+<!-- 섹션 lil (levi'story : Live In Levis) -->
+<section id="lil" data-text="2020 Levi's Music Campain">
+    <div class="container lil">
+        <!-- 섹션 lil : 배경 동영상 (PC) -->
+        <div id="lil_videoBox"><iframe id="lil_video" class="youtube" src="https://www.youtube.com/embed/f0JFNnnHYtw?enablejsapi=1&version=3&playerapiid=ytplayer&controls=0&modestbranding=1&autoplay=1&loop=1&showinfo=0&rel=0&vq=hd1080&wmode=opaque&autohide=1&volume=0&mute=1&playlist=f0JFNnnHYtw" allowfullscreen></iframe></div>
+        <!-- 섹션 lil : 배경 동영상 (모바일 : max-width: 500px) -->
+        <video id="lil_video_m" loop autoplay muted playsinline>
+            <source src="images/lil_liveinlevis.mp4" type="video/mp4" />
+        </video>
+        <!-- 섹션 lil : 텍스트박스 -->
+        <div id="lil_txtBox1">
+            <h4>Live in Levi's</h4>
+            <p>나의 스타일이 아주 특별하다거나 개성있다고 생각하지 않는다. 스타일은 어떤 애티튜드인 것 같다. 옷 못지 않은 에너지를 얼마나 보여줄 수 있는지.</p>
+            <p>&#45; 리바이스에 살다, 소윤</p>
+            <button class="moreBtn lil">자세히 보기<img src="images/right_w.png" alt="이동 아이콘" /></button>
+        </div>
+        <div id="lil_txtBox2">
+            <div id="lil_txtImg"><img src="images/lil_txt.png" alt="나만의 스테이지 가장 나다운 순간" /></div>
+        </div>
+    </div>
+</section>
+
+<!-- 섹션 tip & insta -->
+<div id="instaTipBg">
+    <!-- 섹션 insta (instagram) -->
+    <section id="insta">
+        <!-- (배경 데코 라인) -->
+        <span class="line_v insta"></span>
+        <span class="line_h insta"></span>
+        <span class="line_h insta h2"></span>
+        <!-- (데코) -->
+        <div class="insta_deco deco1"><img src="images/hd_deco_1.png" alt="장식용 사각형" /></div>
+        <div class="insta_deco deco2"><img src="images/hd_deco_2.png" alt="장식용 사각형" /></div>
+        <div class="insta_deco deco3"><img src="images/hd_deco_3.png" alt="장식용 사각형" /></div>
+        <div class="insta_deco deco4"><img src="images/hd_deco_3.png" alt="장식용 사각형" /></div>
+        <div class="container insta">
+            <!-- 타이틀 박스 -->
+            <div class="titBox insta">
+                <h3>&#35;LEVI'S</h3>
+                <P>우리 안의 리바이스</P>
+            </div>
+            <!-- 인스타그램 -->
+            <div id="insta_iBox">
+                <iframe src="https://www.instagram.com/p/CA94JBqDgHd/embed"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 섹션 tip (fitguide & emagazine) -->
+    <section id="tip">
+        <!-- (배경 데코 라인) -->
+        <span class="line_v tip"></span>
+        <span class="line_h tip"></span>
+        <div id="tip_dark"></div>
+        <div class="container tip">
+            <!-- 타이틀 박스 -->
+            <div class="titBox tip">
+                <h3>LEVI'S TIP</h3>
+                <P>리바이스만의 도움되는 혜택</P>
+            </div>
+            <!-- 내용 박스 -->
+           <div class="tip_box">
+              <div class="tip_txt">
+                <h3>FITGUIDE</h3>
+                <p>리바이스의 다양한 청바지 라인 중<br/> 내게 딱 맞는 핏을 찾아보세요</p>
+                <button class="moreBtn tip">자세히 보기<img src="images/right_g.png" alt="이동 아이콘" /></button>
+              </div>
+           </div>
+           <div class="tip_box">
+              <div class="tip_txt">
+                <h3>E-MAGAZINE</h3>
+                <P>지금 리바이스 E-매거진을 구독하고<br/> 15% OFF 쿠폰을 받아보세요</P>
+                <form class="tip_form">
+                   <input class="tip_inputTxt" type="text" name="email" placeholder="e-mail" />
+                   <input class="tip_inputBtn" type="submit" value=" " />
+              </form>
+              </div>
+           </div>
+        </div>
+    </section>
+</div><!--// 섹션 tip & insta -->
+
+<!-- 섹션 lh (levi'story : Levi's History) -->
+<section id="lh">
+    <div class="container lh">
+           
+        <div id="lh_logo">
+            <img src="images/logo_w.png" alt="로고(흰색)" />
+            <h3>501 History</h3>
+        </div>
+        
+        <div class="txtBox lh">
+            <h4>147년의 전통 <br /><span>리바이스 501&reg;</span></h4>
+            <p>1873년 5월 20일, 세계 최초의 청바지가 리바이 스트라우스에 의해 탄생한 날입니다. 그 시작을 함께하며 오늘날까지도 사랑받는 시그니쳐 진, 리바이스 501&reg;.</p>
+            <p>147년 동안 끊임없이 진화하는 리바이스의 전통과 현재를 만나보세요.</p>
+            <button class="moreBtn lh">자세히 보기<img src="images/right_w.png" alt="이동 아이콘" /></button>
+        </div>
+    </div>
+    <div id="lh_bg"></div>
+    <div id="lh_blur"></div>
+</section>
+
+<!-- 섹션 map -->
+<section id="map">
+    <div class="container map">
+        <!-- 타이틀 박스 -->
+        <div class="titBox map">
+            <h3>FIND US</h3>
+            <P>리바이스 매장 찾기</P>
+        </div>
+        <button id="map_btn"><img src="images/down_g.png" alt="지도 여닫기 아이콘" /></button>
+        <div id="map_foldBox">
+          <iframe id="map_iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12658.176814472421!2d127.023406!3d37.518667!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca39bfda21e3d%3A0x6848ea574b7301!2z66as67CU7J207Iqk!5e0!3m2!1sko!2skr!4v1592957966581!5m2!1sko!2skr" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- 푸터 -->
+<footer id="footer">
+    <div class="container ft index">
+        <!-- 푸터 : address -->
+        <address id="address">
+            <ul>
+                <li>회사소개</li>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>사이트맵</li>
+            </ul>
+            <p class="ft_p1">리바이스트라우스 코리아 주식회사 | 대표이사 : 파스칼센코프 | 개인정보관리책임자:파스칼센코프 | 서울특별시 강남구 도산대로 414, 한성빌딩 11층 사업자등록번호 : 120-81-00074 | 통신판매업 신고번호 : 제 2017-서울강남-02417 호 , 사업자정보확인 | 호스팅 사업자 : salesforce.com, inc. | NHN KCP를 통해 신용카드 결제 및 구매안전서비스를 제공합니다.</p>
+            <p class="ft_p2">Levi Strauss Korea Ltd. 2020 All Rights Reserved.</p>
+        </address>
+        <!-- 푸터 : sns -->
+        <div id="snsBox">
+            <img src="images/sns_instagram.png" alt="인스타그램" />
+            <img src="images/sns_facebook2.png" alt="페이스북" />
+            <img src="images/sns_youtube.png" alt="유튜브" />
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- swiper slider -->
+<script src="js/plugIn/swiper/swiper-bundle.js"></script>
+<script>
+    
+    function swiperW(){
+        var swiper = new Swiper('.bi_slideBoxW', {
+
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                850: {
+                  slidesPerView: 2
+                },
+                1050: {
+                  slidesPerView: 3
+                }
+            }
+        });
+    }
+    function swiperM(){
+        
+        var swiper = new Swiper('.bi_slideBoxM', {
+
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                850: {
+                  slidesPerView: 2
+                },
+                1050: {
+                  slidesPerView: 3
+                }
+            }
+        });
+    }
+    
+    swiperW();
+    
+    
+    /* 섹션 bi : 탭버튼 */
+    $(function(){
+        
+        $('.bi_btn.women').click(function(){
+            
+            
+            $('.bi_btn.women, #bi_women').addClass('active');
+            $('.bi_btn.men, #bi_men').removeClass('active');
+            swiperW();
+        });
+        $('.bi_btn.men').click(function(){
+            
+            
+            $('.bi_btn.men, #bi_men').addClass('active');
+            $('.bi_btn.women, #bi_women').removeClass('active');
+            swiperM();
+        });
+    });
+    
+</script>
+
+</body>
+</html>

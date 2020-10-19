@@ -1,0 +1,162 @@
+/********** GNB : 탑, 네비모달, 로그인, 회원가입 **********/
+@charset "UTF-8";
+
+.move {cursor: pointer;}
+
+/* 퀵메뉴 (탑, 헤더, 네비모달) */
+.quickmenu {}
+.quickmenu ul {display: flex; justify-content: flex-end;}
+.quickmenu ul li {color: #8d8d8d; font-weight: 300;}
+.quickmenu ul li:nth-child(1) {margin-top: -1px;}
+
+/* 검색창 (탑, 헤더, 네비모달) */
+.searchBox {display: flex; align-items: center; width: 100%; max-width: 220px; border-bottom: 1px solid #ccc;}
+.searchIcon {width: 15px; height: 15px;}
+.searchBar {padding: 12px; background: transparent; border: none; cursor: text;}
+
+/* 네비 버튼 (탑, 헤더) */
+.nmOpenBtn {display: none; position: relative; width: 30px; height: 30px; border: none; background: transparent; cursor: pointer;}
+.nmOpen {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%; height: 2px;  transition: .5s; cursor: pointer;}
+.nmOpen.click:nth-child(1) {transform: translate(-50%,-50%) translateY(-8px);}
+.nmOpen.click:nth-child(2) {transform: translate(-50%,-50%) translateY(8px);}
+
+/************************* 탑박스 *************************/
+#top_container {z-index: 300; position: fixed; top: 0; left: 0; width: 100%; background: #fff; transition: .3s;}
+#top_container.scroll {transform: translateY(-35px); background: transparent;}
+#top_container:hover {background: #fff;}
+/**************** 탑박스1 ****************/
+#top_box1 {display: flex; justify-content: flex-end; align-items: center; width: 100%; margin-top: 15px; padding: 0 40px;}
+
+/*********** 탑 퀵메뉴 ***********/
+.quickmenu.top {}
+.quickmenu.top ul {}
+.quickmenu.top ul li {margin-left: 15px;}
+.quickmenu.top ul li:nth-child(1) {margin-top: -2px; font-size: .85rem; font-family: 'Roboto Condensed', sans-serif;}
+.quickmenu.top ul li:nth-child(2) {width: 15px; height: 15px; background: url(../images/quick_g1.png) center; background-size: cover;}
+.quickmenu.top ul li:nth-child(3) {width: 15px; height: 15px; background: url(../images/quick_g2.png) center; background-size: cover;}
+
+/**************** 탑박스2 ****************/
+#top_box2 {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; width: 100%; padding: 13px 40px; transition: .3s;}
+#top_box2.scroll {padding: 15px 40px;}
+/*********** 탑 로고 ***********/
+#top_logo {margin-top: 5px; margin-right: 50px; width: 90px; transition: .3s;}
+#top_logo img {width: 100%; cursor: pointer;}
+/*********** 탑 네비 ***********/
+#top_Nav {padding: 14px 0; width: 400px;}
+.top_mainUl {display: flex; align-items: flex-start;}
+.top_mainLi {position: relative; font-weight: 400; font-family: 'Roboto Condensed', sans-serif;}
+.top_mainLi:hover::after {content: ''; position: absolute; top: 20px; left: 0; width: 70%; height: 1px; background: #a8112e; animation: top_mainLi .3s both;}
+@keyframes top_mainLi{
+    from {width: 0;}
+    to {width: 70%;}
+}
+.top_mainLi:nth-child(4) {color: #a8112e;}
+.top_mainLi:nth-child(5) {display: flex; flex-wrap: wrap; align-items: flex-start;}
+.top_mainLi span {position: relative; padding-right: 30px; font-size: 1.1rem; cursor: pointer;}
+.top_subUl {display: none; margin: 5px 0; margin-right: -50px; width: 100%;}
+/*.top_mainLi:last-child .top_subLi:first-child {width: 105%;}*/
+.top_subLi {width: 100%; font-size: .85rem; font-weight: 300; color: #555;}
+.top_subLi:hover {color: #222;}
+.top_mainLi:nth-child(4) .top_subLi {color: #888;}
+.top_mainLi:nth-child(4) .top_subLi:hover {color: #222;}
+/*********** 탑 검색창 ***********/
+.searchBox.top {margin-left: auto;}
+.searchIcon.top {background: url(../images/quick_g3.png) center; background-size: cover;}
+
+/*********** 탑 네비 버튼 ***********/
+.nmOpenBtn.top {margin-top: 2px; margin-left: auto;}
+.nmOpen.top {background: #8d8d8d;}
+
+
+/************************* 네비모달 *************************/
+#navModal {display: none; z-index: 400; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #fff;}
+#navModalBox {position: relative; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 60%; height: 70%}
+/*********** 네비모달 닫기 버튼 ***********/
+#nmClose {position: absolute; top: -15%; right: 0; width: 100px; height: 100px; border: none; background: transparent; cursor: pointer;}
+.nmClose {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%; height: 2px; background: #8d8d8d; cursor: pointer;}
+
+.nmClose:nth-child(1) {transform: translate(-50%,-25px); animation: nmClose1 .7s both;}
+.nmClose:nth-child(2) {transform: translate(-50%,25px); animation: nmClose2 .7s both;}
+@keyframes nmClose1{
+    0% {transform: translate(-50%,25);}
+    70% {transform: translate(-50%,-50%);}
+    100% {transform: translate(-50%,-50%) rotate(45deg);}
+}
+@keyframes nmClose2{
+    0% {transform: translate(-50%,-25);}
+    70% {transform: translate(-50%,-50%);}
+    100% {transform: translate(-50%,-50%) rotate(-45deg);}
+}
+/*********** 네비모달 퀵메뉴 ***********/
+.quickmenu.nm {position: absolute; top: 0; left: 0;}
+.quickmenu.nm ul {}
+.quickmenu.nm ul li {margin-left: 0; margin-right: 15px;}
+.quickmenu.nm ul li:nth-child(1) {}
+.quickmenu.nm ul li:nth-child(2) {width: 15px; height: 15px; background: url(../images/quick_g1.png) center; background-size: cover;}
+.quickmenu.nm ul li:nth-child(3) {width: 15px; height: 15px; background: url(../images/quick_g2.png) center; background-size: cover;}
+/*********** 네비모달 네비 ***********/
+#nm_Nav {position: absolute; top: 50%; transform: translateY(-50%); left: 0;}
+.nm_mainUl {}
+.nm_mainLi {}
+.nm_mainLi span {font-size: 2.5rem; font-weight: 300; cursor: pointer;}
+.nm_subUl {display: none;}
+.nm_subLi {font-weight: 300;}
+/*********** 네비모달 검색창 ***********/
+.searchBox.nm {position: absolute; bottom: 0; left: 0;}
+.searchIcon.nm {background: url(../images/quick_g3.png) center; background-size: cover;}
+.searchBar.nm {}
+
+
+
+
+
+/************************************************************************************* 1400px */
+@media screen and (max-width: 1400px){
+    
+    /**************** 탑박스2 ****************/
+    #top_logo {margin-right: 30px;}
+    .top_mainLi span {padding-right: 25px; font-size: 1rem;}
+}
+
+/* 모바일 */
+/************************************************************************************* 1050px */
+@media screen and (max-width: 1050px){
+    
+    /************************* 탑박스 *************************/
+    #top_container.scroll {transform: translateY(-100%);}
+    #top_box1 {display: none;}
+    /**************** 탑박스2 ****************/
+    #top_box2 {padding: 10px 15px;}
+    #top_box2.scroll {padding: 10px 15px;}
+    #top_logo {width: 75px;}
+    #top_Nav {display: none;}
+    .searchBox.top {display: none;}
+    .nmOpenBtn {display: block;}
+}
+
+/************************************************************************************* 600px */
+@media screen and (max-width: 600px){
+    
+    /**************** 탑박스2 ****************/
+    #top_logo {width: 70px;}
+    
+    /************************* 네비모달 *************************/
+    #nmClose {top: -13%; width: 70px; height: 70px;}
+    .nm_mainLi span {font-size: 2.2rem;}
+}
+
+/************************************************************************************* 400px */
+@media screen and (max-width: 400px){
+    
+    /**************** 탑박스2 ****************/
+    #top_logo {width: 55px;}
+    
+    /*********** 네비모달 ***********/
+    #navModalBox {height: 80%}
+    #nmClose {top: -5%; width: 50px; height: 50px;}
+    .quickmenu.nm {top: 5%;}
+    #nm_Nav {top: 45%;}
+    .nm_mainLi span {font-size: 2rem;}
+    .searchBox.nm {bottom: 5%;}
+}
+
