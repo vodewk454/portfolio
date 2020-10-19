@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Seohyun Jeong">
+    <title>One Page Site</title>
+    
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</head>
+
+<body>
+  
+    <div id="container">
+      
+        <div id="topBox">
+            <div id="navBtn">&equiv;</div>
+            <h1 class="logo">Coral Studio</h1>
+        </div>
+        
+        <div id="navBg"></div>
+        
+        <!-------------- 네비 ------------->
+        <div id="navBox">
+            <button id="closeBtn">&times;</button>
+            <h1 class="logo">Coral Studio</h1>
+            <nav id="nav">
+                <ul>
+                    <li href="#Home">Home</li>
+                    <li href="#Showcase">Showcase</li>
+                    <li href="#Service">Service</li>
+                    <li href="#Designers">Designers</li>
+                    <li href="#Packages">Packages</li>
+                    <li href="#Contact">Contact</li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-------------- 섹션 ------------->
+        <div id="sectionBox">
+            
+            <section id="Home">
+                <h2>Interior Design</h2>
+            </section>
+            
+            <section id="Showcase">
+                <div class="titleBox">
+                    <h3>Showcase</h3>
+                </div>
+                
+                <img src="images/showcase_1.jpg" alt="Design 1" />
+                <img src="images/showcase_2.jpg" alt="Design 2" />
+                <img src="images/showcase_3.jpg" alt="Design 3" />
+                <img src="images/showcase_4.jpg" alt="Design 4" />
+                
+                <!------ 모달 슬라이드 ------>
+                <div id="modalBg">
+                    <div id="modal">
+                        <img id="modalImg" src="images/showcase_1.jpg" alt="이미지1" />
+                        <div id="modalTit">모달 타이틀</div>
+                        
+                        <button id="ModalCloseBtn">&times;</button>
+                        
+                        <button class="btn left"><i class="fas fa-long-arrow-alt-left"></i></button>
+                        <button class="btn right"><i class="fas fa-long-arrow-alt-right"></i></button>
+                        
+                        <div id="dotBox">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            
+            <section id="Service">
+                <div class="titleBox">
+                    <h3>Service</h3>
+                    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
+                    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </section>
+            
+            <section id="Designers">
+                <div class="titleBox">
+                    <h3>Designers</h3>
+                    <p>The best team in the world.</p>
+                    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <h4>Our designers are thoughtfully chosen:</h4>
+                
+                <div class="Designers_box">
+                    <img src="images/designers_1.jpg" />
+                    <div class="Designers_cap">
+                        <h5>John Doe</h5>
+                        <p>CEO &amp; Founder</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    </div>
+                </div>
+                <div class="Designers_box">
+                    <img src="images/designers_2.jpg" />
+                    <div class="Designers_cap">
+                        <h5>John Doe</h5>
+                        <p>CEO &amp; Founder</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    </div>
+                </div>
+                <div class="Designers_box">
+                    <img src="images/designers_3.jpg" />
+                    <div class="Designers_cap">
+                        <h5>John Doe</h5>
+                        <p>CEO &amp; Founder</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="Packages">
+                <div class="titleBox">
+                    <h3>Packages</h3>
+                    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure.</p>
+                </div>
+                
+                <ul id="BasicBox">
+                    <li>Basic</li>
+                    <li>Floorplanning</li>
+                    <li>10 hours support</li>
+                    <li>Photography</li>
+                    <li>20&#37; furniture discount</li>
+                    <li>Good deals</li>
+                    <li>&#36; 199 <br /><span>per room</span></li>
+                    <li><button>Sign Up</button></li>
+                </ul>
+                
+                <ul id="ProBox">
+                    <li>Pro</li>
+                    <li>Floorplanning</li>
+                    <li>50 hours support</li>
+                    <li>Photography</li>
+                    <li>50&#37; furniture discount</li>
+                    <li>GREAT deals</li>
+                    <li>&#36; 249 <br /><span>per room</span></li>
+                    <li><button>Sign Up</button></li>
+                </ul>
+                
+            </section>
+            
+            <section id="Contact">
+                <div class="titleBox">
+                    <h3>Contact</h3>
+                    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+                </div>
+                
+                <form id="form">
+                    <h6>Name</h6>
+                    <input class="inputTxt" type="text" name="Name" />
+                    <h6>Email</h6>
+                    <input class="inputTxt" type="text" name="Email" />
+                    <h6>Message</h6>
+                    <input class="inputTxt" type="text" name="Message" />
+                    <input class="inputBtn" type="button" name="Button" value="Send Message" />
+                </form>
+            </section>
+        </div>
+    </div>
+    
+</body>
+</html>
