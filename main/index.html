@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Seohyun Jeong">
+<meta name="og:description" content="2020 대개봉! 헬로 월드, 잇츠 마이 포트폴리오">
+<meta property="og:image" content="http://vodewk454.dothome.co.kr/main/img/opengraph.jpg">
+<title> Hello world, it's my portfolio </title>
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/site.webmanifest">
+<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Script&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<link href="asset/css/custom.css" rel="stylesheet" />
+<link href="asset/css/scss/ani_dog.css" rel="stylesheet" />
+
+<!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+<script src="asset/js/custom.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- 커서 -->
+    <div id="cursor"></div>
+
+    <!-- 프리로더 -->
+    <div id="preLoad"></div>
+
+    <!-- 네비 버튼 -->
+    <button id="navBtn">
+        <div class="cursor_none"></div>
+        <div class="navBtn_line line1"></div>
+        <div class="navBtn_line line2"></div>
+    </button>
+
+    <!-- 네비 모달 -->
+    <div id="nav">
+        <button id="navClose">
+            <div class="cursor_none"></div>
+            <div class="navClose_line line1"></div>
+            <div class="navClose_line line2"></div>
+        </button>
+        <div class="nav_in center">
+            <ul class="navUl">
+                <li class="navLi navMove cursor_pointer" move="#header">MAIN</li>
+                <li class="navLi navMove cursor_pointer" move="#about">ABOUT</li>
+                <li class="navLi">WORKS
+                    <ul>
+                        <li class="navMove cursor_pointer" move="#works_web">WEB-SITE</li>
+                        <li class="navMove cursor_pointer" move="#works_ani">ANIMATION</li>
+                    </ul>
+                </li>
+                <li class="navLi navMove down cursor_pointer" move="#getInTouch">GET IN TOUCH</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 헤더 -->
+    <header id="header">
+        <div id="hd_in" class="load">
+            <div id="hd_bg">
+                <div id="hd_tit_img">
+                    <img src="img/hd_tit.png" alt="Hello World It's My Portfolio" />
+                </div>
+                    
+                <div class="hd_border hd_top">
+                    <div class="container hd flex_between">
+                        <p>&#10092;p&#10093; 2020 절찬상영중 &#10092;&sol;p&#10093;</p>
+                        <p>&#10092;h1&#10093; 업계를 강타할 감동의 포트폴리오 &#10092;&sol;h1&#10093;</p>
+                    </div>
+                </div>
+                <div class="hd_border hd_bottom">
+                    <div class="container hd flex_between">
+                        <p>&#10092;p&#10093; &#8595;&#8595;&#8595;&#8595;&#8595; &#10092;&sol;p&#10093;</p>
+                        <p>&#10092;h2&#10093; 스크롤을 내려 시작합니다 &#10092;&sol;h2&#10093;</p>
+                        <p>&#10092;p&#10093; &#8595;&#8595;&#8595;&#8595;&#8595; &#10092;&sol;p&#10093;</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="award">
+                <img src="img/award.png" alt="월계수" />
+                <p class="center">2020 GRAND<br /> PORTFOLIO</p>
+            </div>
+
+            <div id="hd_tit">
+                <h1>헬로 월드&#44; <span class="hd_tit_br"><br /></span><span class="hd_tit_h1">잇츠 마이 포트폴리오</span></h1>
+                <h2>Hello World&#44; It&#39;s My Portfolio</h2>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 섹션 -->
+    <!-- ABOUT -->
+    <section id="about" class="hide">
+        <!-- introduce -->
+        <div id="introduce" class="about_in">
+            <div class="sec_titBox about">
+                <h3 class="sec_tit about">About</h3>
+                <span class="line l1"></span>
+                <span class="line l2"></span>
+                <span class="line l3"></span>
+            </div>
+            <div id="int_bg"></div>
+            <div class="container int">
+                <h4 class="sec_subTit int">introduce</h4>
+                <div id="int_txt" class="cursor_text">
+                    <p class="NEXON_B">HELLO WORLD!</p>
+                    <p>안녕하세요, <span class="underline">신입 퍼블리셔 정서현</span>입니다. 저에게 퍼블리싱은 지금까지 해온 일들 중 가장 새로우면서도 적성에 맞는 일입니다. 그래서 공부로 바쁜 중에도 기쁜 나날을 보내고 있습니다.</p>
+                    <p>평소 컴퓨터 작업을 즐겨왔기에 관심을 행동으로 옮기고자 올해 초 독학으로 퍼블리싱 공부를 시작했습니다. 이후 학원을 통해 '반응형 UI/UX디자인' 과정을 이수했습니다.</p>
+                    <p>현재까지 <span class="underline">10개월여의 시간동안 하루종일 코딩과 가까이</span> 해오며 새로운 것을 알게 되고 익혀가는 시간들을 즐겁게 느낍니다.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- education -->
+        <div id="education" class="about_in">
+            <div id="edu_bg"></div>
+            <div class="container edu">
+                <h4 class="sec_subTit edu">education</h4>
+                <div id="edu_listBox">
+                    <div class="edu_list">
+                        <div class="edu_listBg flex_between cursor_pointer">
+                            <div class="edu_listBg_bf1"></div>
+                            <div class="edu_listBg_bf2"></div>
+                            <div>
+                                <p class="edu_listTit">반응형 UI&sol;UX디자인 <span class="edu_list_br"><br /></span>과정 수료</p>
+                                <p class="edu_listTit_eg">Responsive UI&sol;UX Design</p>
+                            </div>
+                            <button class="plusBtn">
+                                <div class="plusBtn_line line1"></div>
+                                <div class="plusBtn_line line2"></div>
+                            </button>
+                        </div>
+                        <div class="edu_listTxt">
+                            <p class="NEXON_B">교육기간 &#58; 2020.03.30 &#45; 2020.08.20</p>
+                            <p>5개월(700시간) 간의 '반응형 UI/UX디자인' 과정을 통해 웹표준에 기반한 HTML 마크업, CSS, JAVA script, JQuery와 2D 그래픽 디자인툴 활용법에 관해 배웠습니다.</p>
+                            <p>특히 상당히 많은 수의 페이지를 클론코딩하며 기본적인 작업속도를 향상시킬 수 있었고, 수업 초반 이후부터 계속해서 자바스크립트와 제이쿼리를 활용해온 덕에 미리 기능적인 부분까지 생각하며 작업하는 습관을 들이게 되었습니다.</p>
+                        </div>
+                    </div>
+                    <div class="edu_list">
+                        <div class="edu_listBg flex_between cursor_pointer">
+                            <div class="edu_listBg_bf1"></div>
+                            <div class="edu_listBg_bf2"></div>
+                            <div>
+                                <p class="edu_listTit">웹디자인기능사 취득</p>
+                                <p class="edu_listTit_eg">Web Design Technician&#39;s License</p>
+                            </div>
+                            <button class="plusBtn">
+                                <div class="plusBtn_line line1"></div>
+                                <div class="plusBtn_line line2"></div>
+                            </button>
+                        </div>
+                        <div class="edu_listTxt">
+                            <p class="NEXON_B">취득일 &#58; 2020.07.10</p>
+                            <p>올해 초 처음 공부하던 시기에는 어려웠던 실기 문제들이 중순쯤 되어 다시 풀어보니 훨씬 수월하게 풀렸습니다. 스스로 성장을 체감할 수 있어 자신감을 얻었고, 4시간이 주어진 시험에서 1시간반 만에 차분히 문제를 풀고 나올 수 있었습니다.</p>
+                        </div>
+                    </div>
+                    <div class="edu_list">
+                        <div class="edu_listBg flex_between cursor_pointer">
+                            <div class="edu_listBg_bf1"></div>
+                            <div class="edu_listBg_bf2"></div>
+                            <div>
+                                <p class="edu_listTit">GTQ 포토샵 1급 취득</p>
+                                <p class="edu_listTit_eg">GTQ Photoshop First Grade</p>
+                            </div>
+                            <button class="plusBtn">
+                                <div class="plusBtn_line line1"></div>
+                                <div class="plusBtn_line line2"></div>
+                            </button>
+                        </div>
+                        <div class="edu_listTxt">
+                            <p class="NEXON_B">취득일 &#58; 2019.07.12</p>
+                            <p>어릴적부터 포토샵에 친숙했기 때문에 독학을 통해 자격증을 취득할 수 있었습니다. 이 과정에서 미처 몰랐던 다양한 기능들과 단축키 등을 습득할 수 있었으며 작업을 보다 효율적으로 처리할 수 있게 되었습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- skill -->
+        <div id="skill" class="about_in">
+            <div class="container skill">
+                <h4 class="sec_subTit skill">skill</h4>
+                
+                <div id="skill_in">
+                    <div id="skill_txtBox">
+                        <p class="skill_txt p1 active"><span>HTML</span>마크업시 웹표준 지침, 웹접근성 지침, 시멘틱 태그의 사용, 전체적인 페이지 구성 등에 유의하며 작업합니다.</p>
+                        <p class="skill_txt"><span>CSS</span>CSS3와 Media query로 구현 가능한 부분에 있어 막힘없이 원하는 결과물을 만들 수 있습니다. SVG와 SCSS의 활용 및 컴파일이 가능합니다.</p>
+                        <p class="skill_txt"><span>Java script</span>자바스크립트를 통해 슬라이더, 레이어팝업 등을 구현하거나 내장객체를 활용해 작업할 수 있습니다.</p>
+                        <p class="skill_txt"><span>Jquery</span>내장객체와 외부 플러그인을 활용해 작업할 수 있습니다. 제이쿼리에 더 숙련되었기 때문에 자바스크립트를 통해 기존의 기능들을 재구현하는 과정에 있습니다.</p>
+                        <p class="skill_txt"><span>PhotoShop</span>이미지 편집 등 퍼블리싱 작업에 요구되는 기능들을 효율적으로 다룰 수 있습니다.</p>
+                        <p class="skill_txt"><span>Illustrator</span>그리드 레이아웃 생성 등 퍼블리싱 작업에 요구되는 기능들을 효율적으로 다룰 수 있습니다.</p>
+
+                        <i id="skill_left" class="cursor_pointer fas fa-long-arrow-alt-left"></i>
+                        <i id="skill_right" class="cursor_pointer fas fa-long-arrow-alt-right"></i>
+                    </div>
+                    
+                    <div id="skill_graphBox">
+                        <svg id="skill_graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 529.98 609.56">
+                        <polyline class="skill_graph graph1" points="269.19 1.44 529.22 154.29 526.98 458.69 262.1 608.68 0.77 455.05 3 150.65 267.88 0.66"></polyline>
+                        <polyline class="skill_graph graph2" points="268.31 10.8 493.73 173.6 515.4 451.95 262.71 545.02 95.96 401.38 27.11 165.1 268.07 11.26"></polyline>
+                        </svg>
+                        
+                        <div id="html" class="skill_name cursor_pointer">HTML</div>
+                        <div id="css" class="skill_name cursor_pointer">CSS</div>
+                        <div id="js" class="skill_name cursor_pointer">Java script</div>
+                        <div id="Jquery" class="skill_name cursor_pointer">Jquery</div>
+                        <div id="ps" class="skill_name cursor_pointer">PhotoShop</div>
+                        <div id="ai" class="skill_name cursor_pointer">Illustrator</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- WORKS -->
+    <section id="works_web" class="hide">
+        <div id="web_container">
+            
+            <div class="sec_titBox works">
+                <h3 class="sec_tit works">Works</h3>
+                <span class="line l1"></span>
+                <span class="line l2"></span>
+                <span class="line l3"></span>
+            </div>
+            
+            <!-- web-site -->
+                <div id="web_groupBox" class="flex_between">
+                    <h4 class="sec_subTit web">web&#45;site</h4>
+                
+                    <div class="web_group g1 flex_between">
+                        <div class="web_info g1">
+                            <div class="web_tit">
+                                <p>LEVI’S KOREA</p>
+                                <h5>리바이스 코리아</h5>
+                            </div>
+                            <div class="web_tag">
+                                <p class="responsive">&#35;반응형</p>
+                                <p class="etc">&#35;인터렉티브 효과</p>
+                                <p class="etc">&#35;동영상 제어</p>
+                                <p class="etc">&#35;슬라이더 제작</p>
+                                <p class="plugin">&#35;swiper</p>
+                                <p class="plugin">&#35;GSAP</p>
+                            </div>
+                            <div class="web_txt mCustomScrollbar" data-mcs-theme="light-thin">
+                                <p>리바이스 코리아 공식홈을 재해석한 리뉴얼 사이트입니다. 메인페이지 외 <span class="underline">6개의 서브페이지</span>로 구성했으며 리바이스의 역동적인 브랜드 아이덴티티를 표현하고자 했습니다.</p>
+                                <p>스크롤과 마우스오버 이벤트를 활용한 인터렉티브 효과, 유튜브와 내장 동영상 제어, 자체제작 또는 swiper 플러그인을 활용한 슬라이더, GSAP 플러그인을 활용한 스크롤 애니메이션 등 다양한 기능들을 포함하고 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="web_img g1 cursor_pointer" onClick="openSite('http://vodewk0937.dothome.co.kr/levis/')">
+                            <img src="img/works_web_levis.jpg" alt="리바이스"/>
+                        </div>
+                    </div>
+                    <div class="web_group g2 flex_between"> 
+                        <div class="web_info g2">
+                            <div class="web_tit">
+                                <p>LEICA CLONE CORDING</p>
+                                <h5>라이카 : 클론코딩</h5>
+                            </div>
+                            <div class="web_tag">
+                                <p class="standard">&#35;웹 표준</p>
+                                <p class="standard">&#35;웹 접근성</p>
+                                <p class="standard">&#35;크로스 브라우징</p>
+                                <p class="responsive">&#35;반응형</p>
+                                <p class="plugin">&#35;swiper</p>
+                                <p class="plugin">&#35;slick</p>
+                            </div>
+                            <div class="web_txt">
+                                <p>라이카 카메라 코리아의 메인페이지를 똑같이 따라 만든 클론코딩 사이트입니다.</p>
+                                <p><span class="underline">기존의 코드를 참고하지 않고 최대한 동일한 디자인</span>을 구현한 뒤, 미비하던 반응형과 애니메이션 등을 추가적으로 보완했습니다.</p>
+                            </div>
+                        </div>
+                        <div class="web_img g2 cursor_pointer" onClick="openSite('http://vodewk0937.dothome.co.kr/leica/')">
+                            <img src="img/works_web_leica.jpg" alt="라이카"/>
+                        </div>
+                    </div>
+                    <div class="web_group g3 flex_between"> 
+                        <div class="web_info g3">
+                            <div class="web_tit">
+                                <p>This Hotel.com</p>
+                                <h5>디스호텔닷컴</h5>
+                            </div>
+                            <div class="web_tag">
+                                <p class="standard">&#35;웹 표준</p>
+                                <p class="standard">&#35;웹 접근성</p>
+                                <p class="standard">&#35;크로스 브라우징</p>
+                                <p class="etc">&#35;슬라이더 제작</p>
+                            </div>
+                            <div class="web_txt">
+                                <P>호텔 홈페이지를 테마로 한 <span class="underline">기본적인 웹 표준 사이트</span>입니다.</P>
+                                <P>자바스크립트를 통해 좌우로 전환되는 두가지 버전의 슬라이더를 제작했습니다.</P>
+                            </div>
+                        </div>
+                        <div class="web_img g3 cursor_pointer" onClick="openSite('http://vodewk0937.dothome.co.kr/thishotel/')">
+                            <img src="img/works_web_thishotel.jpg" alt="디스호텔"/>
+                        </div>
+                    </div>
+                    <div class="web_group g4 flex_between"> 
+                        <div class="web_info g4">
+                            <div class="web_tit">
+                                <p>YEOSU TOURISM</p>
+                                <h5>여수관광청</h5>
+                            </div>
+                            <div class="web_tag">
+                                <p class="standard">&#35;웹 표준</p>
+                                <p class="standard">&#35;웹 접근성</p>
+                                <p class="standard">&#35;크로스 브라우징</p>
+                                <p class="responsive">&#35;반응형</p>
+                                <p class="etc">&#35;슬라이더 제작</p>
+                            </div>
+                            <div class="web_txt">
+                                <p>여수를 모티브로 제작한 여수관광청 사이트입니다.</p>  
+                                <p><span class="underline">그리드 레이아웃</span>을 기반으로 디자인을 구성해, 화면 리사이즈시 자연스럽게 변화하는 반응형 페이지를 만들었습니다.</p>  
+                            </div>
+                        </div>
+                        <div class="web_img g4 cursor_pointer" onClick="openSite('http://vodewk0937.dothome.co.kr/yeosu/')">
+                            <img src="img/works_web_yeosu.jpg" alt="여수관광청"/>
+                        </div>
+                    </div>
+                    <div class="web_group g5 flex_between"> 
+                        <div class="web_info g5">
+                            <div class="web_tit">
+                                <p>ONE-PAGE</p>
+                                <h5>원페이지 사이트</h5>
+                            </div>
+                            <div class="web_tag">
+                                <p class="standard">&#35;웹 표준</p>
+                                <p class="standard">&#35;웹 접근성</p>
+                                <p class="standard">&#35;크로스 브라우징</p>
+                                <p class="responsive">&#35;반응형</p>
+                                <p class="etc">&#35;레이어팝업 슬라이더 제작</p>
+                            </div>
+                            <div class="web_txt">
+                                <p>하나의 페이지 안에서 모든 컨텐츠에 접근할 수 있는 원페이지 사이트입니다.</p> 
+                                <p>메인화면의 <span class="underline">이미지 클릭 시 레이어팝업을 통해 슬라이더</span>가 보여집니다. 또한 <span class="underline">메뉴 클릭시 해당 섹션으로 상하 이동</span>합니다.</p> 
+                            </div>
+                        </div>
+                        <div class="web_img g5 cursor_pointer" onClick="openSite('http://vodewk0937.dothome.co.kr/onepage/')">
+                            <img src="img/works_web_onepage.jpg" alt="원페이지 사이트"/>
+                        </div>
+                    </div>
+                    <div class="web_group g6 flex_between"> 
+                        <div class="web_info g6">
+                            <div class="web_tit">
+                                <p>MOBILE-FIRST</p>
+                                <h5>모바일퍼스트 사이트</h5>
+                            </div>
+                            <div class="web_tag">
+                                <p class="standard">&#35;웹 표준</p>
+                                <p class="standard">&#35;웹 접근성</p>
+                                <p class="standard">&#35;크로스 브라우징</p>
+                                <p class="responsive">&#35;반응형</p>
+                            </div>
+                            <div class="web_txt">
+                                <p><span class="underline">처음에 모바일 화면을 기준으로 제작</span>한 뒤 태블릿, PC 순으로 반응형 작업한 모바일퍼스트 사이트입니다.</p>
+                                <p>모바일 화면에 최적화된 <span class="underline">블록구조</span>의 디자인입니다.</p>
+                            </div>
+                        </div>
+                        <div class="web_img g6 cursor_pointer" onClick="openSite('http://vodewk0937.dothome.co.kr/mobilefirst/')">
+                            <img src="img/works_web_mobilefirst.jpg" alt="모바일퍼스트 사이트"/>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </section>
+    
+    <!-- CSS animation -->
+    <section id="works_ani" class="hide">
+        <div class="container works_ani flex_between">
+            <h4 class="sec_subTit ani">CSS Animation</h4>
+            
+            <div class="container ani flex_between">
+                <div id="ani_list">
+                   
+                    <div id="ani_list_1" class="ani_list flex_between">
+                        <div class="ani_txt g1">
+                            <p class="ani_txt_1">HAPPY POODLE</p>
+                            <h5>행복한 푸들</h5>
+                            <div class="ani_info g1">
+                                <p>오픈소스의 SCSS를 수정한 뒤 VS code를 통해 컴파일한 애니메이션입니다. 마우스오버시 푸들이 더욱 행복해합니다.</p>
+                            </div>
+                        </div>
+                        <div class="ani_ani g1 flex_center">
+                            <div id="dog">
+                                <div class="ears"></div>
+                                <div class="body">
+                                    <div class="head">
+                                        <div class="hair hair--1"></div>
+                                        <div class="hair hair--2"></div>
+                                        <div class="hair hair--3"></div>
+                                        <div class="hair hair--4"></div>
+                                        <div class="hair hair--5"></div>
+                                        <div class="hair hair--6"></div>
+                                        <div class="hair hair--7"></div>
+                                    </div>
+                                    <div class="eyes"></div>
+                                    <div class="beard">
+                                        <div class="mouth">
+                                        <div class="tongue"></div>
+                                        </div>
+                                    </div>
+                                    <div class="belt">
+                                        <div class="locket"></div>
+                                        <div class="dot dot1"></div>
+                                        <div class="dot dot2"></div>
+                                        <div class="dot dot3"></div>
+                                        <div class="dot dot4"></div>
+                                        <div class="tag"></div>
+                                    </div>
+                                    <div class="stomach">
+                                    </div>
+                                    <div class="legs">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                                <div class="tail"></div>
+                                <div class="heartBox">
+                                    <div class="heart heart--1"></div>
+                                    <div class="heart heart--2"></div>
+                                    <div class="heart heart--3"></div>
+                                    <div class="heart heart--4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ani_list_2" class="ani_list flex_between">
+                        <div class="ani_txt g2">
+                            <p class="ani_txt_2">SPARKLING BUBBLE</p>
+                            <h5>스파클링 버블</h5>
+                            <div class="ani_info g2">
+                                <p>마우스 커서의 위치값에 따라 버블이 움직이는 애니메이션입니다. GSAP 플러그인을 통해 움직임에 시간차를 주었습니다.</p>
+                            </div>
+                        </div>
+                        <div class="ani_ani g2 flex_center cursor_ani2">
+                            <div class="follower f1"></div>
+                            <div class="follower f2"></div>
+                            <div class="follower f3"></div>
+                            <div class="follower f4"></div>
+                            <div class="follower f5"></div>
+                            <div class="follower f6"></div>
+                            <div class="follower f7"></div>
+                            <div class="follower f8"></div>
+                            <div class="follower f9"></div>
+                            <div class="follower f10"></div>
+                        </div>
+                    </div>
+                    <div id="ani_list_3" class="ani_list flex_between">
+                        <div class="ani_txt g3">
+                            <p>MUSIC PLAYER</p>
+                            <h5>뮤직 플레이어</h5>
+                            <div class="ani_info g3">
+                                <p>플레이어의 재생 버튼을 누르면 물결이 역동적으로 움직이는 애니메이션입니다. 물결을 이루는 원형의 회전을 빨라지게 하여 변화를 주었습니다.</p>
+                            </div>
+                        </div>
+                        <div class="ani_ani g3 flex_center">
+                            <div id='musicBox' class="cursor_whiteBg">
+                                <div class='image'></div>
+                                <div class='wave'></div>
+                                <div class='wave'></div>
+                                <div class='wave'></div>
+                                <div class='info'>
+                                    <h2 class='title'>summer</h2>
+                                    <div class='artist'>wild</div>
+                                </div>
+                                <i class="fa fa-play trigger cursor_pointer" aria-hidden="true"></i>
+                                <i class="fa fa-pause trigger cursor_pointer" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ani_list_4" class="ani_list flex_between">
+                         <div class="ani_txt g4">
+                            <p>3D CUBE</p>
+                            <h5>3D 큐브</h5>
+                            <div class="ani_info g4">
+                                <p>CSS3의 3D transform 기능을 활용해 각 면의 위치를 설정한 뒤 색상을 달리해 음영을 주었습니다.</p>
+                            </div>
+                        </div>
+                        <div class="ani_ani g4 flex_center">
+                            <div id="cube">
+                                <div class="front"></div>
+                                <div class="back"></div>
+                                <div class="right"></div>
+                                <div class="left"></div>
+                                <div class="top"></div>
+                                <div class="bottom"></div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- GET IN TOUCH -->
+    <section id="getInTouch" class="hide">
+        <!-- goal -->
+        <div id="goal">
+            <div id="goal_bg"></div>
+            <div class="container goal">
+                
+                <div id="goal_txtBox">
+                    <div class="goal_txt">
+                        <p class="goal_number">0</p>
+                        <p class="cursor_text">
+                            <span class="const">const</span>
+                            <span class="me">me</span> = [
+                            <span class="inner">'기본'</span>, 
+                            <span class="inner">'꼼꼼'</span>, 
+                            <span class="inner">'협동'</span>,
+                            <span class="inner">'열정'</span>];
+                        </p>
+                    </div>
+                    <div class="goal_txt">
+                        <p class="goal_number">1</p>
+                        <p class="cursor_text">특정 환경의 <span class="inner">기본</span> 체계에 맞추기 위해 노력합니다. 기본을 지키는 것은 나중에 발생할 수 있는 간극을 줄이고 능률을 높입니다. 따라서 코딩시 언제나 임의의 <span class="underline">규칙과 순서에 유의하며 작업</span>하고 있습니다. 이러한 노력을 통해 회사의 규칙을 빠르게 습득할 수 있다고 자신합니다.</p>
+                    </div>
+                    <div class="goal_txt">
+                        <p class="goal_number">2</p>
+                        <p class="cursor_text"><span class="inner">꼼꼼</span>함은 저의 최대 강점입니다. 누구나 실수할 수 있지만 이를 최소한으로 줄여주는 것이 바로 꼼꼼한 검수입니다. 공공기관에서 인턴으로 근무하던 때에 저의 특성을 알아주신 상사로부터 중요한 출판물 검수 작업을 지속적으로 요청받기도 했습니다.</p>
+                    </div>
+                    <div class="goal_txt">
+                        <p class="goal_number">3</p>
+                        <p class="cursor_text"><span class="inner">협동</span>은 개인의 역량만큼 중요한 능력입니다. 공공기관 인턴과 서비스직 아르바이트, 학과 생활과 동아리 활동 등을 통해 여러가지 협동을 배워왔습니다. 하나의 문제를 함께 해결해나가야하는 과정에서 때때로 갈등이 생길 수 있지만 <span class="underline">다양한 사회적 경험들과 이해력, 친화력을 통해 유연하게 대처</span>해왔습니다.</p>
+                    </div>
+                    <div class="goal_txt">
+                        <p class="goal_number">4</p>
+                        <p class="cursor_text">신입으로서 여백이 많은 만큼 <span class="inner">열정</span>으로 다채롭게 채워나가겠습니다 -!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- message -->
+        <div id="message">
+          
+           <div class="sec_titBox git">
+                <h3 class="sec_tit git">Get In Touch</h3>
+                <span class="line l1"></span>
+                <span class="line l2"></span>
+                <span class="line l3"></span>
+            </div>
+            
+            <img class="bulb bulb1" src="img/git_msg_bulb.png" alt="전구" />
+            <img class="bulb bulb2" src="img/git_msg_bulb.png" alt="전구" />
+            
+            <div class="container msg">
+                <div class="msg_group g1">
+                    <img class="tape gray" src="img/git_msg_tape_gray.png" alt="회색 테이프" />
+                    <img id="matisse" src="img/git_msg_matisse.jpg" alt="마티스 그림" />
+                </div>
+                <div class="msg_group g2">
+                    <img class="tape blue" src="img/git_msg_tape_blue.png" alt="파란색 테이프" />
+                    <img id="pic_4rows" src="img/git_msg_pic_4rows.jpg" alt="인생네컷" />
+                </div>
+                <div class="msg_group g3">
+                    <div class="postIt postIt1 flex_center">
+                        <p>Lose something, get something.</p>
+                    </div>
+                </div>
+                <div class="msg_group g4">
+                    <img class="tape purple" src="img/git_msg_tape_purple.png" alt="보라색 테이프" />
+                    <img id="pic_sky" src="img/git_msg_pic_sky.jpg" alt="하늘 사진" />
+                </div>
+                <div class="msg_group g5">
+                    <img id="pic_polaroid1" src="img/git_msg_pic_polaroid1.jpg" alt="폴라로이드" />
+                </div>
+                <div class="msg_group g6">
+                    <img id="pic_polaroid2" src="img/git_msg_pic_polaroid2.jpg" alt="폴라로이드" />
+                </div>
+                <div class="msg_group g7">
+                    <img class="tape gray" src="img/git_msg_tape_gray.png" alt="회색 테이프" />
+                    <img id="pic_black" src="img/git_msg_pic_black.jpg" alt="흑백 사진" />
+                </div>
+                
+                <div class="msg_group g8">
+                    <div class="postIt postIt2 flex_center">
+                        <p>Thank you :)</p>
+                    </div>
+                </div>
+                
+                <!-- message form -->
+                <div class="msg_group g9">
+                    <img class="tape brown" src="img/git_msg_tape_brown.png" alt="갈색 테이프" />
+                    <div id="messagePaper">
+                        <form id="msg_form">
+                            <label class="msg_p top">&#10092;&#33;&#45;&#45; SEOHYUN JEONG</label>
+                            <input class="msg_txt cursor_text" type="text" name="name" placeholder="이름" autocomplete="off" required/>
+                            <input class="msg_txt cursor_text" type="email" name="email" placeholder="이메일" autocomplete="off" required/>
+                            <textarea class="msg_txt textarea cursor_text" name="message" placeholder="무엇이든 물어보세요" autocomplete="off" required></textarea>
+                            <label class="msg_p bottom">YOU &#45;&#45;&#10093;</label>
+                            <input id="msg_btn" class="cursor_pointer" type="submit" value="SEND" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 푸터 (contact) -->
+    <footer id="footer" class="hide">
+        <address class="container foot flex_between">
+            <div class="foot_group g1">
+                <h6>PERSONAL</h6>
+                <p>NAME : 정서현</p>
+                <p>BIRTH : 1995.06.21</p>
+            </div>
+            <div class="foot_group g2">
+                <h6>CONTACT</h6>
+                <p>PHONE : <a class="cursor_pointer" href="tel:01026820937">010.2682.0937</a></p>
+                <p>E-MAIL : <a class="cursor_pointer" href="mailto:vodewk454@gmail.com">vodewk454@gmail.com</a></p>
+            </div>
+            <div class="foot_group g3">
+                <p>Copyright &#169; 2020 Jeong Seohyun, All Rights Reserved</p>
+            </div>
+        </address>
+    </footer>
+    
+    <script>
+        // IE 알림
+        const agent = navigator.userAgent.toLowerCase();
+        if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+            alert("포트폴리오를 보기 위해 다른 브라우저를 이용해주세요 :)");
+            document.body.style.display="none";
+        }
+    </script>
+    
+</body>
+</html>
